@@ -752,7 +752,7 @@ function syncPanel(v){
   var av=document.getElementById('ph-avatar'), ti=document.getElementById('ph-title'), su=document.getElementById('ph-sub'), st=document.getElementById('ph-stars'), pr=document.getElementById('ph-progress');
   if(!ti) return;
   if(v==='home'){ if(av){av.textContent='🦖';av.style.background='var(--teal)';} ti.textContent='Who is learning today?'; if(su) su.textContent='BrightMind AI — Rexy Learn • Pick a learner to begin'; }
-  else { if(av){av.textContent=currentChild==='meera'?'Dh':'Dy';av.style.background=currentChild==='meera'?'var(--coral)':'var(--teal)';}
+  else { if(av){av.textContent=currentChild==='meera'?'Me':'Aa';av.style.background=currentChild==='meera'?'var(--coral)':'var(--teal)';}
     ti.textContent=(v==='dashboard'?'Parent Dashboard':(c.first+' — '+meta.t));
     if(su) su.textContent=c.name+' • '+c.level; }
   var p=progress[currentChild];
@@ -877,7 +877,7 @@ function choicesFor(ans,spread){
 function genPlaceValue(){
   var qs=[];
   for(var i=0;i<2;i++){ var n=rnd(21,99); var t=Math.floor(n/10), o=n%10;
-    qs.push({skill:'placeValue',type:'choice',prompt:'What is '+n+' made of?',choices:shuffle([t+' tens and '+o+' ones',(t+1)+' tens and '+o+' ones',t+' tens and '+(o===9?0:o+1)+' ones',o+' tens and '+t+' ones']),answer:t+' tens and '+o+' ones',hint:'Look at the middle/end digits. The tens digit tells you how many tens.',explain:'Step 1: In '+n+', the tens digit is '+t+'. Step 2: The ones digit is '+o+'. Step 3: So '+n+' = '+t+' tens and '+o+' ones.'});
+    qs.push({skill:'placeValue',type:'choice',prompt:'What is '+n+' made of?',choices:shuffle([t+' tens and '+o+' ones',(t+1)+' tens and '+o+' ones',t+' tens and '+(o===9?0:o+1)+' ones',(t===9?1:t+1)+' tens and '+(o===0?1:o-1)+' ones']),answer:t+' tens and '+o+' ones',hint:'Look at the middle/end digits. The tens digit tells you how many tens.',explain:'Step 1: In '+n+', the tens digit is '+t+'. Step 2: The ones digit is '+o+'. Step 3: So '+n+' = '+t+' tens and '+o+' ones.'});
   }
   var t2=rnd(2,9), o2=rnd(0,9), n2=t2*10+o2;
   qs.push({skill:'placeValue',type:'number',prompt:'A number has '+t2+' tens and '+o2+' ones. What is the number?',answer:n2,hint:'Put the tens first, then the ones: '+t2+' tens means '+ (t2*10) +'.',explain:'Step 1: '+t2+' tens = '+(t2*10)+'. Step 2: Add '+o2+' ones: '+(t2*10)+' + '+o2+' = '+n2+'.'});
@@ -1032,7 +1032,7 @@ function setDashChild(id){ dashChild=id; document.getElementById('tab-aarav').cl
 function masteryLabel(pct,attempts){ if(!attempts) return 'Not started'; if(pct>=90) return 'Mastered'; if(pct>=75) return 'Proficient'; if(pct>=55) return 'Practising'; if(pct>=35) return 'Developing'; return 'Exploring — needs support'; }
 function renderDashboard(){
   var id=dashChild, c=CHILDREN[id], p=progress[id];
-  var html='<div class="card"><div class="flex"><div class="avatar '+(id==='aarav'?'av-aarav':'av-meera')+'">'+(id==='aarav'?'Dy':'Dh')+'</div><div><h3>'+c.name+'</h3><p class="muted" style="margin:0">'+c.level+' • '+p.stars+' ⭐ this visit • Total time: '+(p.totalSeconds<60? p.totalSeconds+' sec' : Math.floor(p.totalSeconds/60)+' min '+(p.totalSeconds%60)+' sec')+' • Lessons finished: '+p.sessions.length+'</p></div></div></div>';
+  var html='<div class="card"><div class="flex"><div class="avatar '+(id==='aarav'?'av-aarav':'av-meera')+'">'+(id==='aarav'?'Aa':'Me')+'</div><div><h3>'+c.name+'</h3><p class="muted" style="margin:0">'+c.level+' • '+p.stars+' ⭐ this visit • Total time: '+(p.totalSeconds<60? p.totalSeconds+' sec' : Math.floor(p.totalSeconds/60)+' min '+(p.totalSeconds%60)+' sec')+' • Lessons finished: '+p.sessions.length+'</p></div></div></div>';
   html+='<h3 class="display" style="font-size:1.4rem;margin:18px 0 6px">Mastery by skill — '+c.first+' only</h3>';
   var gaps=[], bestNext=null, lowest=101;
   SKILLS[id].forEach(function(s){
