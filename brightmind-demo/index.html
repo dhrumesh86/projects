@@ -28,7 +28,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;font-family:"Nunito",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-tap-highlight-color:transparent}
 h1,h2,h3,.display{font-family:"Baloo 2","Nunito",sans-serif;line-height:1.15;margin:0}
-.wrap{max-width:1020px;margin:0 auto;padding:0 16px 128px}
+.wrap{max-width:none;margin:0;padding:0 16px 56px}
 a{color:var(--teal-dark)} @media(prefers-color-scheme:dark){a{color:#7ED3D1}}
 button{font-family:inherit;cursor:pointer}
 .topbar{position:sticky;top:0;z-index:30;background:var(--bg);padding:10px 0 8px;border-bottom:2px solid var(--line)}
@@ -207,7 +207,7 @@ footer{margin-top:28px}
 .muse-floater.bubble-collapsed .muse-bubble-label{opacity:0;transform:scale(.6) translateX(14px);pointer-events:none}
 @media(max-width:480px){.muse-fab{width:70px;height:70px;flex-basis:70px}.muse-avatar{width:58px;height:58px}.muse-bubble-label{display:none}}
 /* Helper floater panel (the GUI that pops up) */
-.muse-panel{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:106px;z-index:41;width:min(368px,calc(100vw - 28px));background:var(--card);color:var(--ink);border:3px solid #0B3B4F;border-radius:24px;box-shadow:0 24px 54px rgba(11,35,48,.38);overflow:hidden;opacity:0;transform:translateY(18px) scale(.92);transform-origin:bottom right;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.2,1.4,.4,1)}
+.muse-panel{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:20px;z-index:41;width:min(368px,calc(100vw - 28px));background:var(--card);color:var(--ink);border:3px solid #0B3B4F;border-radius:24px;box-shadow:0 24px 54px rgba(11,35,48,.38);overflow:hidden;opacity:0;transform:translateY(18px) scale(.92);transform-origin:bottom right;pointer-events:none;transition:opacity .22s ease,transform .22s cubic-bezier(.2,1.4,.4,1)}
 .muse-panel.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
 @media(prefers-color-scheme:dark){.muse-panel{border-color:#7ED3D1}}
 .muse-panel-head{background:linear-gradient(135deg,#0E7C7B,#0B3B4F);color:#fff;padding:16px 16px 14px;display:flex;gap:12px;align-items:center;position:relative}
@@ -227,7 +227,7 @@ footer{margin-top:28px}
 #muse-panel-feedback{min-height:1.1em;font-size:.84rem;color:var(--teal-dark);margin-top:8px}
 @media(prefers-color-scheme:dark){#muse-panel-feedback{color:#7ED3D1}}
 /* In-page helper panel styles */
-.muse-panel{width:min(430px,calc(100vw - 20px));bottom:104px;max-height:min(82vh,760px);display:flex;flex-direction:column}
+.muse-panel{width:min(430px,calc(100vw - 20px));bottom:20px;max-height:min(82vh,760px);display:flex;flex-direction:column}
 .muse-panel-body{display:flex;flex-direction:column;gap:10px;max-height:none;overflow:hidden;padding:12px 14px 14px}
 .muse-chat-log{flex:1;min-height:260px;max-height:38vh;overflow:auto;background:var(--bg);border:2px solid var(--line);border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
 .muse-msg{max-width:88%;padding:10px 12px;border-radius:16px;font-weight:700;font-size:.94rem;line-height:1.45;white-space:pre-wrap;word-break:break-word;animation:museMsgIn .25s ease both}
@@ -249,21 +249,21 @@ footer{margin-top:28px}
 .muse-chat-form input:focus{outline:3px solid var(--amber);outline-offset:1px;border-color:var(--teal)}
 .muse-chat-form button{flex:0 0 auto}
 .muse-inpage-badge{display:inline-flex;align-items:center;gap:6px;background:#FFD166;color:#3A2700;font-size:.72rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase;padding:5px 9px;border-radius:999px}
-@media(max-width:480px){.muse-panel{bottom:96px}.muse-chat-log{max-height:42vh;min-height:230px}}
+@media(max-width:480px){.muse-panel{bottom:16px}.muse-chat-log{max-height:42vh;min-height:230px}}
 @media(prefers-reduced-motion:reduce){.muse-fab,.muse-fab:before,.muse-fab:after,.muse-bubble-label,.muse-avatar .eye,.muse-avatar .wave-arm,.muse-avatar .sparkle,.muse-avatar .bob,.muse-fab .muse-live-dot,.muse-msg,.muse-typing i{animation:none!important}.muse-panel{transition:none}}
 
 /* ===== ACE-style left rail + steady centre panel (kid-friendly) ===== */
 :root{ --rail-w:78px; --rail-w-open:238px; --c-home:#0E7C7B; --c-lessons:#2B6CB0; --c-quiz:#D98E04; --c-work:#2F9E44; --c-code:#5B4BC4; --c-draw:#E85D4D; --c-dash:#0B3B4F; --c-help:#B7791F; }
 html,body{height:100%}
-body{display:flex;overflow:hidden}
+body{display:block;overflow:hidden}
 :focus-visible{outline:4px solid var(--amber);outline-offset:2px;border-radius:10px}
-.app-rail{flex:0 0 var(--rail-w);width:var(--rail-w);height:100dvh;background:#0B3B4F;color:#fff;display:flex;flex-direction:column;gap:6px;padding:12px 10px;z-index:60;transition:width .22s ease,flex-basis .22s ease;overflow:hidden}
+.app-rail{position:fixed;left:0;top:0;width:var(--rail-w);height:100dvh;background:#0B3B4F;color:#fff;display:flex;flex-direction:column;gap:6px;padding:12px 10px;z-index:60;transition:width .22s ease;overflow:hidden}
 @media(prefers-color-scheme:dark){.app-rail{background:#0A2530}}
 .app-rail .rail-brand{display:flex;align-items:center;gap:10px;font-family:"Baloo 2";font-weight:800;font-size:1.15rem;padding:6px 6px 12px;white-space:nowrap}
 .app-rail .rail-brand small{display:block;font-family:"Nunito";font-size:.64rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#9fd8d6}
 .rail-label{opacity:0;transition:opacity .15s ease;white-space:nowrap;font-weight:900;font-size:1rem}
-@media(hover:hover) and (min-width:861px){ .app-rail:hover{flex-basis:var(--rail-w-open);width:var(--rail-w-open)} .app-rail:hover .rail-label{opacity:1} }
-.app-rail.expanded{flex-basis:var(--rail-w-open);width:var(--rail-w-open)} .app-rail.expanded .rail-label{opacity:1}
+@media(hover:hover) and (min-width:861px){ .app-rail:hover{width:var(--rail-w-open);box-shadow:18px 0 44px rgba(6,26,34,.35)} .app-rail:hover .rail-label{opacity:1} }
+.app-rail.expanded{width:var(--rail-w-open);box-shadow:18px 0 44px rgba(6,26,34,.35)} .app-rail.expanded .rail-label{opacity:1}
 .rail-tab{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;border:3px solid transparent;background:rgba(255,255,255,.06);color:#fff;border-radius:16px;padding:8px 10px;text-align:left}
 .rail-tab .ric{font-size:1.55rem;line-height:1;flex:0 0 34px;text-align:center}
 .rail-tab:active{transform:scale(.97)}
@@ -273,7 +273,7 @@ body{display:flex;overflow:hidden}
 .rail-tab[data-sec="code"].sel{background:var(--c-code)} .rail-tab[data-sec="draw"].sel{background:var(--c-draw)}
 .rail-tab[data-sec="dashboard"].sel{background:#12506B} .rail-tab[data-sec="help"].sel{background:var(--c-help)}
 .rail-toggle{margin-top:auto}
-.app-main{flex:1 1 auto;min-width:0;height:100dvh;display:flex;flex-direction:column;background:var(--bg)}
+.app-main{margin-left:var(--rail-w);min-width:0;height:100dvh;display:flex;flex-direction:column;background:var(--bg)}
 .panel-head{flex:0 0 auto;background:var(--card);border-bottom:3px solid var(--line);padding:12px 18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;z-index:20}
 .panel-head .ph-avatar{width:52px;height:52px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:"Baloo 2";font-weight:800;font-size:1.25rem;flex:0 0 52px}
 .panel-head h2{font-size:1.45rem}
@@ -283,7 +283,7 @@ body{display:flex;overflow:hidden}
 .ph-prog{background:var(--teal-soft);border:2px solid var(--teal);border-radius:999px;padding:7px 13px;font-weight:900}
 .panel-body{flex:1 1 auto;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){ .panel-body{scroll-behavior:auto} html{scroll-behavior:auto} .app-rail{transition:none} }
-.wrap{max-width:1020px;margin:0 auto;padding:6px 16px 110px;width:100%}
+.wrap{max-width:none;margin:0;padding:6px 24px 56px;width:100%}
 .qprogress{position:sticky;top:0;z-index:5;background:var(--amber);color:#3A2700;font-weight:900;font-size:1.05rem;border-radius:12px;padding:10px 14px;margin:12px 0;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .qbox.current-q{border-color:var(--amber);box-shadow:0 0 0 3px var(--amber-soft)}
 /* Drawing pad as a steady split view (question stays visible) */
@@ -312,7 +312,7 @@ body{display:flex;overflow:hidden}
   .panel-head h2{font-size:1.2rem}
   .panel-head .ph-avatar{width:44px;height:44px;flex-basis:44px;font-size:1.05rem}
   .ph-chip,.ph-prog{padding:5px 10px;font-size:.86rem}
-  .wrap{padding:4px 12px 150px}
+  .wrap{padding:4px 12px 72px}
   .draw-layout{grid-template-columns:1fr}
   .draw-qside{position:sticky;top:0;z-index:6;padding:10px 14px}
   .draw-qside .dq{font-size:1.1rem}
@@ -321,7 +321,7 @@ body{display:flex;overflow:hidden}
   .muse-bubble-label{display:none}
   .muse-fab{width:58px;height:58px;flex-basis:58px}
   .muse-avatar{width:48px;height:48px}
-  .muse-panel{bottom:88px}
+  .muse-panel{bottom:16px}
 }
 @media(max-width:400px){ :root{--rail-w:50px} .panel-head .ph-sub{display:none} }
 /* Drawer scrim (phones/tablets only, shown while the rail drawer is open) */
@@ -342,6 +342,14 @@ body{display:flex;overflow:hidden}
 .muse-panel-close{width:44px;height:44px}
 /* Height fallback for older Chrome/WebKit, then dynamic viewport height */
 .app-rail,.app-main{height:100vh;height:100dvh}
+/* Helper button docked in the panel header — always visible, never floats over lessons or buttons */
+.ph-helper{display:flex;align-items:center;gap:9px;background:#0B3B4F;border:3px solid #0B3B4F;color:#fff;border-radius:999px;padding:4px 16px 4px 5px;min-height:52px;font-weight:900;box-shadow:0 4px 0 rgba(11,59,79,.3)}
+.ph-helper .muse-avatar{width:42px;height:42px;flex:0 0 42px}
+.ph-helper .ph-helper-txt{font-family:"Baloo 2","Nunito",sans-serif;font-size:1.05rem;white-space:nowrap}
+.ph-helper:active{transform:scale(.96)}
+.ph-helper.wiggle .muse-avatar{animation:museWiggle .85s ease}
+@media(prefers-color-scheme:dark){.ph-helper{background:#7ED3D1;border-color:#7ED3D1;color:#0B2530}}
+@media(max-width:860px){.ph-helper{min-height:48px;padding:4px}.ph-helper .ph-helper-txt{display:none}.ph-helper .muse-avatar{width:38px;height:38px;flex-basis:38px}}
 
 </style>
 </head>
@@ -364,7 +372,30 @@ body{display:flex;overflow:hidden}
 <header class="panel-head" aria-label="Current lesson status">
   <div class="ph-avatar" id="ph-avatar" aria-hidden="true">Aa</div>
   <div><h2 id="ph-title">Who is learning today?</h2><p class="ph-sub" id="ph-sub">Pick Aarav or Meera on Home to begin</p></div>
-  <div class="ph-right"><span class="ph-prog" id="ph-progress">⭐ Pick a learner to start</span><span class="ph-chip" id="ph-stars">⭐ 0 stars</span></div>
+  <div class="ph-right"><button class="ph-helper" id="muse-fab" onclick="toggleMusePanel()" aria-haspopup="dialog" aria-expanded="false" aria-controls="muse-panel" aria-label="Open in-page helper — built-in Rexy tutor, not live Muse"><svg class="muse-avatar" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+      <path class="sparkle" d="M14 18 l2.2 5.4 5.4 2.2 -5.4 2.2 -2.2 5.4 -2.2 -5.4 -5.4 -2.2 5.4 -2.2z" fill="#FFD166"/>
+      <path class="sparkle s2" d="M86 12 l1.7 4.2 4.2 1.7 -4.2 1.7 -1.7 4.2 -1.7 -4.2 -4.2 -1.7 4.2 -1.7z" fill="#FFD166"/>
+      <g class="bob">
+        <line x1="50" y1="16" x2="50" y2="7" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="50" cy="6" r="4.5" fill="#F2A81D" stroke="#fff" stroke-width="2"/>
+        <circle cx="19" cy="52" r="6" fill="#0B3B4F" stroke="#fff" stroke-width="2.5"/>
+        <circle cx="81" cy="52" r="6" fill="#0B3B4F" stroke="#fff" stroke-width="2.5"/>
+        <ellipse cx="50" cy="53" rx="31" ry="29" fill="#FFF8EC" stroke="#fff" stroke-width="2"/>
+        <circle class="eye" cx="39" cy="49" r="5" fill="#1E2A32"/>
+        <circle class="eye" cx="61" cy="49" r="5" fill="#1E2A32"/>
+        <circle cx="40.8" cy="47.2" r="1.7" fill="#fff"/>
+        <circle cx="62.8" cy="47.2" r="1.7" fill="#fff"/>
+        <ellipse cx="31" cy="60" rx="5" ry="3.2" fill="#FFB4A8" opacity=".85"/>
+        <ellipse cx="69" cy="60" rx="5" ry="3.2" fill="#FFB4A8" opacity=".85"/>
+        <path d="M41 61 Q50 69 59 61" stroke="#1E2A32" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+        <rect x="38" y="72" width="24" height="13" rx="6.5" fill="#0E7C7B"/>
+        <circle cx="45" cy="78.5" r="1.8" fill="#fff"/><circle cx="50" cy="78.5" r="1.8" fill="#fff"/><circle cx="55" cy="78.5" r="1.8" fill="#fff"/>
+      </g>
+      <g class="wave-arm">
+        <path d="M76 68 Q90 62 91 48" stroke="#FFF8EC" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <circle cx="91" cy="45" r="5.5" fill="#FFF8EC"/>
+      </g>
+    </svg><span class="ph-helper-txt">Ask Rexy</span></button><span class="ph-prog" id="ph-progress">⭐ Pick a learner to start</span><span class="ph-chip" id="ph-stars">⭐ 0 stars</span></div>
 </header>
 <div class="panel-body" id="panel-body">
 
@@ -453,7 +484,7 @@ body{display:flex;overflow:hidden}
         <li>Voice with a tap/type fallback<span class="st">Planned — voice only where the browser supports it safely</span></li>
         <li>Family testing on tablet &amp; iPad<span class="st">Planned — before the kids use it on their own</span></li>
       </ul>
-      <div class="notice" style="margin-bottom:0">Today, use the <strong>in-page helper</strong> above (built-in Rexy tutor, not live Muse) or the floating helper avatar at the bottom-right for help without leaving BrightMind. For live Muse, tap <strong>“Open live Muse chat”</strong> inside the helper panel — that opens muse.ai outside this app in a new tab. The PC tutor will later add saved progress and voice on the dedicated PC.</div>
+      <div class="notice" style="margin-bottom:0">Today, use the <strong>in-page helper</strong> above (built-in Rexy tutor, not live Muse) or the Ask Rexy button in the top bar for help without leaving BrightMind. For live Muse, tap <strong>“Open live Muse chat”</strong> inside the helper panel — that opens muse.ai outside this app in a new tab. The PC tutor will later add saved progress and voice on the dedicated PC.</div>
     </div>
   </div>
 
@@ -462,7 +493,7 @@ body{display:flex;overflow:hidden}
     <h3 style="margin:10px 0 6px">What this Phase 1 app is — and is not</h3>
     <ul style="font-weight:600;margin:8px 0;padding-left:20px">
       <li><strong>Rexy teaches with built-in lessons</strong> written for this app — original stories and questions, not copied from IXL, TVO, K5 or Khan Academy.</li>
-      <li><strong>In-page helper — built-in Rexy tutor, not live Muse:</strong> tap the floating helper avatar (bottom-right) or any <em>In-page helper</em> button and the helper slides open over this webpage. Its replies come from built-in Rexy tutor logic on this page — it is not a live Muse connection. It can explain topics, give hints, set practice questions and check answers right there. For live Muse, tap <em>Open live Muse chat</em> inside the panel — that is the live Muse chat outside this app and opens muse.ai in a new tab. <em>Page Help</em> (top menu) is separate built-in FAQs. The tutor on the dedicated PC is still being built for saved progress and voice.</li>
+      <li><strong>In-page helper — built-in Rexy tutor, not live Muse:</strong> tap the Ask Rexy button in the top bar or any <em>In-page helper</em> button and the helper slides open over this webpage. Its replies come from built-in Rexy tutor logic on this page — it is not a live Muse connection. It can explain topics, give hints, set practice questions and check answers right there. For live Muse, tap <em>Open live Muse chat</em> inside the panel — that is the live Muse chat outside this app and opens muse.ai in a new tab. <em>Page Help</em> (top menu) is separate built-in FAQs. The tutor on the dedicated PC is still being built for saved progress and voice.</li>
       <li><strong>Read-aloud</strong> uses your browser's voice (SpeechSynthesis). If your browser has no voice, the words stay on screen to read together.</li>
       <li><strong>Voice answering:</strong> <span id="sr-status">Checking your browser…</span></li>
       <li><strong>Curriculum:</strong> Topics follow Ontario Grade 2 and JK themes. <strong>Official expectation codes are unverified</strong> in this build, so none are shown as official.</li>
@@ -578,42 +609,7 @@ body{display:flex;overflow:hidden}
 
 </div></div>
 
-<!-- ============ HELPER FLOATER — tap the animated avatar ============ -->
-<div class="muse-floater" id="muse-floater">
-  <button class="muse-bubble-label" id="muse-bubble" onclick="toggleMusePanel()" aria-haspopup="dialog" aria-expanded="false" aria-controls="muse-panel" aria-label="Open in-page helper — built-in Rexy tutor, not live Muse">
-    <b id="muse-bubble-title">🦖 Hi! I&rsquo;m Rexy</b>
-    <span id="muse-bubble-sub">Tap me — in-page help &amp; practice!</span>
-  </button>
-  <button class="muse-fab" id="muse-fab" onclick="toggleMusePanel()" aria-haspopup="dialog" aria-expanded="false" aria-controls="muse-panel" aria-label="Open in-page helper — built-in Rexy tutor, not live Muse">
-    <span class="muse-live-dot" aria-hidden="true"></span>
-    <svg class="muse-avatar" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-      <path class="sparkle" d="M14 18 l2.2 5.4 5.4 2.2 -5.4 2.2 -2.2 5.4 -2.2 -5.4 -5.4 -2.2 5.4 -2.2z" fill="#FFD166"/>
-      <path class="sparkle s2" d="M86 12 l1.7 4.2 4.2 1.7 -4.2 1.7 -1.7 4.2 -1.7 -4.2 -4.2 -1.7 4.2 -1.7z" fill="#FFD166"/>
-      <g class="bob">
-        <line x1="50" y1="16" x2="50" y2="7" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
-        <circle cx="50" cy="6" r="4.5" fill="#F2A81D" stroke="#fff" stroke-width="2"/>
-        <circle cx="19" cy="52" r="6" fill="#0B3B4F" stroke="#fff" stroke-width="2.5"/>
-        <circle cx="81" cy="52" r="6" fill="#0B3B4F" stroke="#fff" stroke-width="2.5"/>
-        <ellipse cx="50" cy="53" rx="31" ry="29" fill="#FFF8EC" stroke="#fff" stroke-width="2"/>
-        <circle class="eye" cx="39" cy="49" r="5" fill="#1E2A32"/>
-        <circle class="eye" cx="61" cy="49" r="5" fill="#1E2A32"/>
-        <circle cx="40.8" cy="47.2" r="1.7" fill="#fff"/>
-        <circle cx="62.8" cy="47.2" r="1.7" fill="#fff"/>
-        <ellipse cx="31" cy="60" rx="5" ry="3.2" fill="#FFB4A8" opacity=".85"/>
-        <ellipse cx="69" cy="60" rx="5" ry="3.2" fill="#FFB4A8" opacity=".85"/>
-        <path d="M41 61 Q50 69 59 61" stroke="#1E2A32" stroke-width="3.2" fill="none" stroke-linecap="round"/>
-        <rect x="38" y="72" width="24" height="13" rx="6.5" fill="#0E7C7B"/>
-        <circle cx="45" cy="78.5" r="1.8" fill="#fff"/><circle cx="50" cy="78.5" r="1.8" fill="#fff"/><circle cx="55" cy="78.5" r="1.8" fill="#fff"/>
-      </g>
-      <g class="wave-arm">
-        <path d="M76 68 Q90 62 91 48" stroke="#FFF8EC" stroke-width="7" fill="none" stroke-linecap="round"/>
-        <circle cx="91" cy="45" r="5.5" fill="#FFF8EC"/>
-      </g>
-    </svg>
-  </button>
-</div>
-
-<!-- In-page helper — opens inside this webpage when the avatar is tapped -->
+<!-- In-page helper — opens inside this webpage when the Ask Rexy button in the top bar (or any In-page helper button) is tapped -->
 <div class="muse-panel" id="muse-panel" role="dialog" aria-label="In-page helper — built-in Rexy tutor, not live Muse" aria-hidden="true">
   <div class="muse-panel-head">
     <svg class="muse-avatar" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
@@ -658,7 +654,7 @@ body{display:flex;overflow:hidden}
       <button class="btn muse" type="submit" style="border-radius:999px;min-height:48px">Send ➤</button>
     </form>
     <p id="muse-panel-feedback" role="status"></p>
-    <p class="muse-panel-note" style="margin-top:0!important">This helper’s replies come from built-in Rexy tutor logic on this page — not from a live Muse connection. Your lesson is still underneath. Close with ✕ and tap the floating Rexy avatar any time to come back. Grown-ups: please stay nearby while the kids learn.</p>
+    <p class="muse-panel-note" style="margin-top:0!important">This helper’s replies come from built-in Rexy tutor logic on this page — not from a live Muse connection. Your lesson is still underneath. Close with ✕ and tap Ask Rexy in the top bar any time to come back. Grown-ups: please stay nearby while the kids learn.</p>
     <div style="border:2px solid var(--teal);border-radius:14px;padding:12px;background:var(--teal-soft)">
       <p style="font-weight:900;margin:0 0 4px">Want live Muse instead?</p>
       <p style="font-weight:600;margin:0 0 10px;font-size:.9rem">This is the live Muse chat outside this app. It opens muse.ai in a new tab and needs a grown-up sign-in.</p>
@@ -877,7 +873,7 @@ function choicesFor(ans,spread){
 function genPlaceValue(){
   var qs=[];
   for(var i=0;i<2;i++){ var n=rnd(21,99); var t=Math.floor(n/10), o=n%10;
-    qs.push({skill:'placeValue',type:'choice',prompt:'What is '+n+' made of?',choices:shuffle([t+' tens and '+o+' ones',(t+1)+' tens and '+o+' ones',t+' tens and '+(o===9?0:o+1)+' ones',(t===9?1:t+1)+' tens and '+(o===0?1:o-1)+' ones']),answer:t+' tens and '+o+' ones',hint:'Look at the middle/end digits. The tens digit tells you how many tens.',explain:'Step 1: In '+n+', the tens digit is '+t+'. Step 2: The ones digit is '+o+'. Step 3: So '+n+' = '+t+' tens and '+o+' ones.'});
+    qs.push({skill:'placeValue',type:'choice',prompt:'What is '+n+' made of?',choices:shuffle([t+' tens and '+o+' ones',(t+1)+' tens and '+o+' ones',t+' tens and '+(o===9?0:o+1)+' ones',(t===9?0:t+1)+' tens and '+(o===0?9:o-1)+' ones']),answer:t+' tens and '+o+' ones',hint:'Look at the middle/end digits. The tens digit tells you how many tens.',explain:'Step 1: In '+n+', the tens digit is '+t+'. Step 2: The ones digit is '+o+'. Step 3: So '+n+' = '+t+' tens and '+o+' ones.'});
   }
   var t2=rnd(2,9), o2=rnd(0,9), n2=t2*10+o2;
   qs.push({skill:'placeValue',type:'number',prompt:'A number has '+t2+' tens and '+o2+' ones. What is the number?',answer:n2,hint:'Put the tens first, then the ones: '+t2+' tens means '+ (t2*10) +'.',explain:'Step 1: '+t2+' tens = '+(t2*10)+'. Step 2: Add '+o2+' ones: '+(t2*10)+' + '+o2+' = '+n2+'.'});
@@ -1448,7 +1444,7 @@ function copyPromptByKey(key,btn){
 }
 /* ================= HELPER ================= */
 var FAQS=[
-  {q:'Is the in-page helper live Muse?',a:'No. The in-page helper is a built-in Rexy tutor on this page \u2014 its replies come from built-in tutor logic, not from a live Muse connection. Tap the floating Rexy avatar at the bottom-right, or any \u201cIn-page helper\u201d button, to open it. Pick Aarav, Meera, or Grown-ups inside, type a question or tap a quick button, and Rexy will explain, hint, set a practice question, or check a sum like 47 + 25. For live Muse, tap \u201cOpen live Muse chat\u201d inside the helper panel \u2014 that is the live Muse chat outside this app and opens muse.ai in a new tab.'},
+  {q:'Is the in-page helper live Muse?',a:'No. The in-page helper is a built-in Rexy tutor on this page \u2014 its replies come from built-in tutor logic, not from a live Muse connection. Tap the Ask Rexy button in the top bar, or any \u201cIn-page helper\u201d button, to open it. Pick Aarav, Meera, or Grown-ups inside, type a question or tap a quick button, and Rexy will explain, hint, set a practice question, or check a sum like 47 + 25. For live Muse, tap \u201cOpen live Muse chat\u201d inside the helper panel \u2014 that is the live Muse chat outside this app and opens muse.ai in a new tab.'},
   {q:'How do I start a lesson?',a:'From Parent Home, tap your child\u2019s big card, then tap any lesson card. Rexy teaches first, then the questions appear below.'},
   {q:'How do hints work?',a:'Every question has a yellow 💡 Hint button. A hint points you in the right direction without giving the answer, so you still get to figure it out.'},
   {q:'What happens if I get a question wrong?',a:'Nothing bad! After you tap “I\u2019m Done,” a section called Learn From Your Mistakes shows what you picked, the correct answer, and Rexy\u2019s step-by-step explanation. Then you can try a brand-new test.'},
@@ -1571,7 +1567,7 @@ function museBrain(raw){
       return 'Here\u2019s a fresh one just for you, '+museName()+'! 🎯\n\n'+q.prompt+extra+ch+'\n\nType your answer here and I\u2019ll check it. Stuck? Ask me for a hint first!';
     }catch(e){ return 'Here\u2019s a quick one: What is 10 more than 47? Type your answer and I\u2019ll check it!'; }
   }
-  if(t.indexOf('navigate')>-1 || t.indexOf('how do i use')>-1 || t.indexOf('where is')>-1 || t.indexOf('help me')>-1 || t.indexOf('drawing')>-1 || t.indexOf('scratch')>-1) return 'I\u2019ll guide you — you don\u2019t have to leave this chat to find things, but here\u2019s the map 🧭:\n\n• Lessons: Parent Home → tap Aarav or Meera → tap a lesson card\n• Coding: 🧩 Code Quest button at the top, or the Code Quest card on the lessons page\n• Scratch paper: ✏️ Drawing Pad button at the very top\n• Your stars & gaps: 📊 Parent Dashboard at the top\n• This helper: the floating Rexy avatar (bottom-right) — that\u2019s me, the in-page helper!\n\nClose this chat with ✕ when you\u2019re ready and your lesson will be right where you left it.';
+  if(t.indexOf('navigate')>-1 || t.indexOf('how do i use')>-1 || t.indexOf('where is')>-1 || t.indexOf('help me')>-1 || t.indexOf('drawing')>-1 || t.indexOf('scratch')>-1) return 'I\u2019ll guide you — you don\u2019t have to leave this chat to find things, but here\u2019s the map 🧭:\n\n• Lessons: Parent Home → tap Aarav or Meera → tap a lesson card\n• Coding: 🧩 Code Quest button at the top, or the Code Quest card on the lessons page\n• Scratch paper: ✏️ Drawing Pad button at the very top\n• Your stars & gaps: 📊 Parent Dashboard at the top\n• This helper: the Ask Rexy button in the top bar — that\u2019s me, the in-page helper!\n\nClose this chat with ✕ when you\u2019re ready and your lesson will be right where you left it.';
   if(t.indexOf('hello')>-1 || t.indexOf('hi')===0 || t==='hey') return 'Hello, '+museName()+'! 👋 Great to see you inside BrightMind! I\u2019m Rexy, your in-page helper (built-in tutor, not live Muse). Shall we do a practice question, learn place value, or check a sum? Just type what you\u2019d like.';
   if(t.indexOf('thank')>-1) return 'You\u2019re so welcome! 🌟 I\u2019m proud of how hard you\u2019re working. Want one more practice question before you go?';
   if(t.indexOf('mistake')>-1 || t.indexOf('wrong')>-1 || t.indexOf('explain')>-1) return 'Mistakes are how brains grow — let\u2019s fix it together, step by step! 🔍\n\nTell me the question (or type the sum, like 47 + 25) and what answer you got, and I\u2019ll show you exactly where it went tricky and how to get the right answer. You can also finish a lesson and read “Learn From Your Mistakes” there.';
@@ -1588,35 +1584,17 @@ function copyMusePanelPrompt(btn){
 document.addEventListener('keydown',function(e){ if(e.key==='Escape' && musePanelIsOpen) toggleMusePanel(false); });
 document.addEventListener('click',function(e){
   if(!musePanelIsOpen) return;
-  var panel=document.getElementById('muse-panel'), floater=document.getElementById('muse-floater');
+  var panel=document.getElementById('muse-panel');
   var opener = e.target && e.target.closest ? e.target.closest('[onclick*="openMuseChat"],[onclick*="toggleMusePanel"]') : null;
   if(opener) return;
-  if(panel && floater && !panel.contains(e.target) && !floater.contains(e.target)) toggleMusePanel(false);
+  if(panel && !panel.contains(e.target)) toggleMusePanel(false);
 });
 (function(){
   setMuseLearner('aarav',false);
-  /* While the centre panel scrolls, shrink the floating avatar so it never sits on top of the words being read; it grows back when scrolling stops. */
-  var pbEl=document.getElementById('panel-body'), flEl=document.getElementById('muse-floater'), shrinkT=null;
-  if(pbEl && flEl){ pbEl.addEventListener('scroll',function(){ flEl.classList.add('mini'); if(shrinkT) clearTimeout(shrinkT); shrinkT=setTimeout(function(){ flEl.classList.remove('mini'); },700); },{passive:true}); }
   /* Escape also closes the rail drawer on tablets with keyboards */
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ var r=document.getElementById('app-rail'); if(r && r.classList.contains('expanded')) toggleRail(false); } });
   var chatForm=document.getElementById('muse-chat-form');
   if(chatForm){ chatForm.addEventListener('submit',function(e){ e.preventDefault(); var inp=document.getElementById('muse-chat-input'); var v=inp?inp.value:''; if(inp) inp.value=''; sendMuseText(v); if(inp) inp.focus(); }); }
-  /* On tablets/narrow screens, tuck the speech bubble away after a hello so the floater never sits on top of page buttons — the animated avatar stays as the tap target. */
-  setTimeout(function(){
-    if(window.innerWidth<=900){ var f=document.getElementById('muse-floater'); if(f) f.classList.add('bubble-collapsed'); }
-  },4500);
-  var lines=[
-    ['🦖 Hi! I\u2019m Rexy','Tap me — in-page help & practice!'],
-    ['💬 Stuck on a question?','Tap me — I\u2019ll explain it!'],
-    ['⭐ Ready for a new test?','Tap me — let\u2019s practise together!']
-  ], li=0;
-  setInterval(function(){
-    if(musePanelIsOpen) return;
-    li=(li+1)%lines.length;
-    var t=document.getElementById('muse-bubble-title'), s=document.getElementById('muse-bubble-sub');
-    if(t) t.textContent=lines[li][0]; if(s) s.textContent=lines[li][1];
-  },5500);
   setInterval(function(){
     if(musePanelIsOpen) return;
     var fab=document.getElementById('muse-fab'); if(!fab) return;
