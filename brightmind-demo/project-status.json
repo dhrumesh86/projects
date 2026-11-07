@@ -1,0 +1,58 @@
+{
+  "updated": "2026-11-07",
+  "direction": "One Rexy Learn website: global starter catalogue, family testing on the existing public URL, always-on PC selected for the private student database.",
+  "completed": [
+    "Audited the existing project and created an ordered backlog",
+    "Merged the published-demo interface into one shared frontend",
+    "Replaced distorted Code Quest artwork with four original concept scenes",
+    "Added responsive 3 / 2 / 1-column coding cards",
+    "Added preschool to Grade 12 catalogue starter samples",
+    "Connected local family lessons to server grading and progress",
+    "Tested mobile learner selection, grading, saved results and parent review"
+  ],
+  "next": [
+    "Complete parent authentication and device authorization",
+    "Connect the public website to the protected PC backend",
+    "Replace fixed family profiles with an extensible student database",
+    "Persist coding projects, learning paths and all-grade lesson evidence",
+    "Expand and review country-specific curricula and accessibility",
+    "Add encrypted database backups using existing Google Drive storage"
+  ],
+  "enquiries": [
+    {
+      "id": "E01",
+      "request": "Test laptop, mobile and tablet navigation/performance",
+      "status": "Browser checks completed; real iPad/Android tests pending"
+    },
+    {
+      "id": "E02",
+      "request": "Keep a tracker and ad hoc enquiry register",
+      "status": "Implemented in this site and project docs"
+    },
+    {
+      "id": "E03",
+      "request": "Merge into the existing public website",
+      "status": "One shared frontend prepared for the existing GitHub Pages path"
+    },
+    {
+      "id": "E04",
+      "request": "Fix distorted Code Quest card images",
+      "status": "Implemented and visually checked"
+    },
+    {
+      "id": "E05",
+      "request": "Make learning universal across grades",
+      "status": "14 stages, 56 starter samples; complete syllabuses remain planned"
+    },
+    {
+      "id": "E06",
+      "request": "Use Dhyey Patel and Dhyan Patel as test users",
+      "status": "Reference profiles renamed; no existing records overwritten"
+    },
+    {
+      "id": "E07",
+      "request": "Use an always-on PC backend and existing Google AI Plus (2 TB) benefits",
+      "status": "PC selected; encrypted Drive backups planned; protected HTTPS connection pending"
+    }
+  ]
+}

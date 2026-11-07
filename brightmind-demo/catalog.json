@@ -1,0 +1,1282 @@
+{
+  "version": 1,
+  "scope": "Original topic-based starter samples; not complete national curricula.",
+  "stages": [
+    {
+      "id": "pre-k",
+      "label": "Preschool"
+    },
+    {
+      "id": "k",
+      "label": "Kindergarten"
+    },
+    {
+      "id": "1",
+      "label": "Grade 1"
+    },
+    {
+      "id": "2",
+      "label": "Grade 2"
+    },
+    {
+      "id": "3",
+      "label": "Grade 3"
+    },
+    {
+      "id": "4",
+      "label": "Grade 4"
+    },
+    {
+      "id": "5",
+      "label": "Grade 5"
+    },
+    {
+      "id": "6",
+      "label": "Grade 6"
+    },
+    {
+      "id": "7",
+      "label": "Grade 7"
+    },
+    {
+      "id": "8",
+      "label": "Grade 8"
+    },
+    {
+      "id": "9",
+      "label": "Grade 9"
+    },
+    {
+      "id": "10",
+      "label": "Grade 10"
+    },
+    {
+      "id": "11",
+      "label": "Grade 11"
+    },
+    {
+      "id": "12",
+      "label": "Grade 12"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "pre-k-math",
+      "stage": "pre-k",
+      "subject": "Mathematics",
+      "title": "Count and compare",
+      "level": "Preschool",
+      "questions": [
+        {
+          "id": "pre-k-math-0",
+          "prompt": "How many stars? ★ ★ ★",
+          "answer": "3",
+          "explanation": "Work one step at a time. The correct result is 3."
+        },
+        {
+          "id": "pre-k-math-1",
+          "prompt": "How many dots? ● ●",
+          "answer": "2",
+          "explanation": "Work one step at a time. The correct result is 2."
+        },
+        {
+          "id": "pre-k-math-2",
+          "prompt": "Which number comes after 4?",
+          "answer": "5",
+          "explanation": "Work one step at a time. The correct result is 5."
+        }
+      ]
+    },
+    {
+      "id": "pre-k-science",
+      "stage": "pre-k",
+      "subject": "Science",
+      "title": "Living things",
+      "level": "Preschool",
+      "questions": [
+        {
+          "id": "pre-k-science-0",
+          "prompt": "Which is a living thing?",
+          "choices": [
+            "A tree",
+            "A stone",
+            "A spoon"
+          ],
+          "answer": "A tree",
+          "explanation": "A tree grows and needs water and energy."
+        }
+      ]
+    },
+    {
+      "id": "pre-k-english",
+      "stage": "pre-k",
+      "subject": "English & Literacy",
+      "title": "Sounds and words",
+      "level": "Preschool",
+      "questions": [
+        {
+          "id": "pre-k-english-0",
+          "prompt": "Which word begins with B?",
+          "choices": [
+            "Ball",
+            "Sun",
+            "Map"
+          ],
+          "answer": "Ball",
+          "explanation": "Ball starts with the /b/ sound."
+        }
+      ]
+    },
+    {
+      "id": "pre-k-computing",
+      "stage": "pre-k",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Preschool",
+      "questions": [
+        {
+          "id": "pre-k-computing-0",
+          "prompt": "What does a sequence tell a computer?",
+          "choices": [
+            "Steps in order",
+            "The colour of the screen",
+            "How heavy the computer is"
+          ],
+          "answer": "Steps in order",
+          "explanation": "A sequence is an ordered set of instructions."
+        }
+      ]
+    },
+    {
+      "id": "k-math",
+      "stage": "k",
+      "subject": "Mathematics",
+      "title": "Number adventures",
+      "level": "Kindergarten",
+      "questions": [
+        {
+          "id": "k-math-0",
+          "prompt": "2 + 1 = ?",
+          "answer": "3",
+          "explanation": "Work one step at a time. The correct result is 3."
+        },
+        {
+          "id": "k-math-1",
+          "prompt": "5 − 1 = ?",
+          "answer": "4",
+          "explanation": "Work one step at a time. The correct result is 4."
+        },
+        {
+          "id": "k-math-2",
+          "prompt": "Which number comes before 7?",
+          "answer": "6",
+          "explanation": "Work one step at a time. The correct result is 6."
+        }
+      ]
+    },
+    {
+      "id": "k-science",
+      "stage": "k",
+      "subject": "Science",
+      "title": "Our senses",
+      "level": "Kindergarten",
+      "questions": [
+        {
+          "id": "k-science-0",
+          "prompt": "Which body part helps us hear?",
+          "choices": [
+            "Ears",
+            "Elbows",
+            "Knees"
+          ],
+          "answer": "Ears",
+          "explanation": "Ears detect sounds."
+        }
+      ]
+    },
+    {
+      "id": "k-english",
+      "stage": "k",
+      "subject": "English & Literacy",
+      "title": "Beginning sounds",
+      "level": "Kindergarten",
+      "questions": [
+        {
+          "id": "k-english-0",
+          "prompt": "Which word rhymes with cat?",
+          "choices": [
+            "Hat",
+            "Dog",
+            "Sun"
+          ],
+          "answer": "Hat",
+          "explanation": "Cat and hat share the ending sound."
+        }
+      ]
+    },
+    {
+      "id": "k-computing",
+      "stage": "k",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Kindergarten",
+      "questions": [
+        {
+          "id": "k-computing-0",
+          "prompt": "What does a sequence tell a computer?",
+          "choices": [
+            "Steps in order",
+            "The colour of the screen",
+            "How heavy the computer is"
+          ],
+          "answer": "Steps in order",
+          "explanation": "A sequence is an ordered set of instructions."
+        }
+      ]
+    },
+    {
+      "id": "1-math",
+      "stage": "1",
+      "subject": "Mathematics",
+      "title": "Adding small numbers",
+      "level": "Grade 1",
+      "questions": [
+        {
+          "id": "1-math-0",
+          "prompt": "3 + 4 = ?",
+          "answer": "7",
+          "explanation": "Work one step at a time. The correct result is 7."
+        },
+        {
+          "id": "1-math-1",
+          "prompt": "5 + 2 = ?",
+          "answer": "7",
+          "explanation": "Work one step at a time. The correct result is 7."
+        },
+        {
+          "id": "1-math-2",
+          "prompt": "6 + 3 = ?",
+          "answer": "9",
+          "explanation": "Work one step at a time. The correct result is 9."
+        }
+      ]
+    },
+    {
+      "id": "1-science",
+      "stage": "1",
+      "subject": "Science",
+      "title": "Plants around us",
+      "level": "Grade 1",
+      "questions": [
+        {
+          "id": "1-science-0",
+          "prompt": "Which do most green plants need to make food?",
+          "choices": [
+            "Sunlight",
+            "Plastic",
+            "Sandpaper"
+          ],
+          "answer": "Sunlight",
+          "explanation": "Green plants use light energy in photosynthesis."
+        }
+      ]
+    },
+    {
+      "id": "1-english",
+      "stage": "1",
+      "subject": "English & Literacy",
+      "title": "Sentence sense",
+      "level": "Grade 1",
+      "questions": [
+        {
+          "id": "1-english-0",
+          "prompt": "Which starts a sentence?",
+          "choices": [
+            "A capital letter",
+            "A comma",
+            "A space only"
+          ],
+          "answer": "A capital letter",
+          "explanation": "A written sentence starts with a capital letter."
+        }
+      ]
+    },
+    {
+      "id": "1-computing",
+      "stage": "1",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 1",
+      "questions": [
+        {
+          "id": "1-computing-0",
+          "prompt": "What does a sequence tell a computer?",
+          "choices": [
+            "Steps in order",
+            "The colour of the screen",
+            "How heavy the computer is"
+          ],
+          "answer": "Steps in order",
+          "explanation": "A sequence is an ordered set of instructions."
+        }
+      ]
+    },
+    {
+      "id": "2-math",
+      "stage": "2",
+      "subject": "Mathematics",
+      "title": "Place value and addition",
+      "level": "Grade 2",
+      "questions": [
+        {
+          "id": "2-math-0",
+          "prompt": "4 tens and 7 ones make what number?",
+          "answer": "47",
+          "explanation": "Work one step at a time. The correct result is 47."
+        },
+        {
+          "id": "2-math-1",
+          "prompt": "32 + 15 = ?",
+          "answer": "47",
+          "explanation": "Work one step at a time. The correct result is 47."
+        },
+        {
+          "id": "2-math-2",
+          "prompt": "68 − 24 = ?",
+          "answer": "44",
+          "explanation": "Work one step at a time. The correct result is 44."
+        }
+      ]
+    },
+    {
+      "id": "2-science",
+      "stage": "2",
+      "subject": "Science",
+      "title": "Materials",
+      "level": "Grade 2",
+      "questions": [
+        {
+          "id": "2-science-0",
+          "prompt": "Which material is usually attracted to a magnet?",
+          "choices": [
+            "Iron",
+            "Wood",
+            "Glass"
+          ],
+          "answer": "Iron",
+          "explanation": "Iron is a magnetic material."
+        }
+      ]
+    },
+    {
+      "id": "2-english",
+      "stage": "2",
+      "subject": "English & Literacy",
+      "title": "Reading for detail",
+      "level": "Grade 2",
+      "questions": [
+        {
+          "id": "2-english-0",
+          "prompt": "Milo packed a red bag. What colour was the bag?",
+          "choices": [
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "answer": "Red",
+          "explanation": "The sentence directly says the bag was red."
+        }
+      ]
+    },
+    {
+      "id": "2-computing",
+      "stage": "2",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 2",
+      "questions": [
+        {
+          "id": "2-computing-0",
+          "prompt": "What does a sequence tell a computer?",
+          "choices": [
+            "Steps in order",
+            "The colour of the screen",
+            "How heavy the computer is"
+          ],
+          "answer": "Steps in order",
+          "explanation": "A sequence is an ordered set of instructions."
+        }
+      ]
+    },
+    {
+      "id": "3-math",
+      "stage": "3",
+      "subject": "Mathematics",
+      "title": "Multiplication patterns",
+      "level": "Grade 3",
+      "questions": [
+        {
+          "id": "3-math-0",
+          "prompt": "3 × 4 = ?",
+          "answer": "12",
+          "explanation": "Work one step at a time. The correct result is 12."
+        },
+        {
+          "id": "3-math-1",
+          "prompt": "6 × 5 = ?",
+          "answer": "30",
+          "explanation": "Work one step at a time. The correct result is 30."
+        },
+        {
+          "id": "3-math-2",
+          "prompt": "7 × 3 = ?",
+          "answer": "21",
+          "explanation": "Work one step at a time. The correct result is 21."
+        }
+      ]
+    },
+    {
+      "id": "3-science",
+      "stage": "3",
+      "subject": "Science",
+      "title": "Habitats",
+      "level": "Grade 3",
+      "questions": [
+        {
+          "id": "3-science-0",
+          "prompt": "What is a habitat?",
+          "choices": [
+            "The place an organism lives",
+            "A type of cloud",
+            "A measuring tool"
+          ],
+          "answer": "The place an organism lives",
+          "explanation": "A habitat provides the conditions and resources an organism needs."
+        }
+      ]
+    },
+    {
+      "id": "3-english",
+      "stage": "3",
+      "subject": "English & Literacy",
+      "title": "Nouns and verbs",
+      "level": "Grade 3",
+      "questions": [
+        {
+          "id": "3-english-0",
+          "prompt": "Which word is a verb?",
+          "choices": [
+            "Run",
+            "Table",
+            "Pencil"
+          ],
+          "answer": "Run",
+          "explanation": "A verb can name an action, such as run."
+        }
+      ]
+    },
+    {
+      "id": "3-computing",
+      "stage": "3",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 3",
+      "questions": [
+        {
+          "id": "3-computing-0",
+          "prompt": "What does a sequence tell a computer?",
+          "choices": [
+            "Steps in order",
+            "The colour of the screen",
+            "How heavy the computer is"
+          ],
+          "answer": "Steps in order",
+          "explanation": "A sequence is an ordered set of instructions."
+        }
+      ]
+    },
+    {
+      "id": "4-math",
+      "stage": "4",
+      "subject": "Mathematics",
+      "title": "Division detectives",
+      "level": "Grade 4",
+      "questions": [
+        {
+          "id": "4-math-0",
+          "prompt": "48 ÷ 6 = ?",
+          "answer": "8",
+          "explanation": "Work one step at a time. The correct result is 8."
+        },
+        {
+          "id": "4-math-1",
+          "prompt": "63 ÷ 7 = ?",
+          "answer": "9",
+          "explanation": "Work one step at a time. The correct result is 9."
+        },
+        {
+          "id": "4-math-2",
+          "prompt": "48 ÷ 4 = ?",
+          "answer": "12",
+          "explanation": "Work one step at a time. The correct result is 12."
+        }
+      ]
+    },
+    {
+      "id": "4-science",
+      "stage": "4",
+      "subject": "Science",
+      "title": "States of matter",
+      "level": "Grade 4",
+      "questions": [
+        {
+          "id": "4-science-0",
+          "prompt": "What process turns liquid water into water vapour?",
+          "choices": [
+            "Evaporation",
+            "Freezing",
+            "Melting"
+          ],
+          "answer": "Evaporation",
+          "explanation": "Evaporation changes liquid water into gas."
+        }
+      ]
+    },
+    {
+      "id": "4-english",
+      "stage": "4",
+      "subject": "English & Literacy",
+      "title": "Making inferences",
+      "level": "Grade 4",
+      "questions": [
+        {
+          "id": "4-english-0",
+          "prompt": "Lea grabbed an umbrella as rain began. Why?",
+          "choices": [
+            "To stay dry",
+            "To bake bread",
+            "To measure a desk"
+          ],
+          "answer": "To stay dry",
+          "explanation": "The rain and umbrella support this inference."
+        }
+      ]
+    },
+    {
+      "id": "4-computing",
+      "stage": "4",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 4",
+      "questions": [
+        {
+          "id": "4-computing-0",
+          "prompt": "What does a loop do in a program?",
+          "choices": [
+            "Repeats instructions",
+            "Deletes every file",
+            "Changes the keyboard colour"
+          ],
+          "answer": "Repeats instructions",
+          "explanation": "A loop repeats instructions according to its condition or count."
+        }
+      ]
+    },
+    {
+      "id": "5-math",
+      "stage": "5",
+      "subject": "Mathematics",
+      "title": "Decimals in everyday life",
+      "level": "Grade 5",
+      "questions": [
+        {
+          "id": "5-math-0",
+          "prompt": "1.25 + 2.5 = ?",
+          "answer": "3.75",
+          "explanation": "Work one step at a time. The correct result is 3.75."
+        },
+        {
+          "id": "5-math-1",
+          "prompt": "3.75 + 1.25 = ?",
+          "answer": "5.00",
+          "explanation": "Work one step at a time. The correct result is 5.00."
+        },
+        {
+          "id": "5-math-2",
+          "prompt": "0.6 + 0.35 = ?",
+          "answer": "0.95",
+          "explanation": "Work one step at a time. The correct result is 0.95."
+        }
+      ]
+    },
+    {
+      "id": "5-science",
+      "stage": "5",
+      "subject": "Science",
+      "title": "Earth and space",
+      "level": "Grade 5",
+      "questions": [
+        {
+          "id": "5-science-0",
+          "prompt": "What causes day and night on Earth?",
+          "choices": [
+            "Earth rotating",
+            "The Moon disappearing",
+            "The Sun switching off"
+          ],
+          "answer": "Earth rotating",
+          "explanation": "Different parts of the rotating Earth face the Sun."
+        }
+      ]
+    },
+    {
+      "id": "5-english",
+      "stage": "5",
+      "subject": "English & Literacy",
+      "title": "Figurative language",
+      "level": "Grade 5",
+      "questions": [
+        {
+          "id": "5-english-0",
+          "prompt": "“The classroom was a zoo” is an example of…",
+          "choices": [
+            "Metaphor",
+            "A page number",
+            "A literal animal count"
+          ],
+          "answer": "Metaphor",
+          "explanation": "A metaphor describes one thing as another to suggest a comparison."
+        }
+      ]
+    },
+    {
+      "id": "5-computing",
+      "stage": "5",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 5",
+      "questions": [
+        {
+          "id": "5-computing-0",
+          "prompt": "What does a loop do in a program?",
+          "choices": [
+            "Repeats instructions",
+            "Deletes every file",
+            "Changes the keyboard colour"
+          ],
+          "answer": "Repeats instructions",
+          "explanation": "A loop repeats instructions according to its condition or count."
+        }
+      ]
+    },
+    {
+      "id": "6-math",
+      "stage": "6",
+      "subject": "Mathematics",
+      "title": "Integers and ratios",
+      "level": "Grade 6",
+      "questions": [
+        {
+          "id": "6-math-0",
+          "prompt": "−3 + 8 = ?",
+          "answer": "5",
+          "explanation": "Work one step at a time. The correct result is 5."
+        },
+        {
+          "id": "6-math-1",
+          "prompt": "A recipe uses 2 cups for 4 people. How many cups for 12 people?",
+          "answer": "6",
+          "explanation": "Work one step at a time. The correct result is 6."
+        },
+        {
+          "id": "6-math-2",
+          "prompt": "What is 25% of 80?",
+          "answer": "20",
+          "explanation": "Work one step at a time. The correct result is 20."
+        }
+      ]
+    },
+    {
+      "id": "6-science",
+      "stage": "6",
+      "subject": "Science",
+      "title": "Food webs",
+      "level": "Grade 6",
+      "questions": [
+        {
+          "id": "6-science-0",
+          "prompt": "In a food chain, what is a producer?",
+          "choices": [
+            "An organism that makes its own food",
+            "An animal that eats only meat",
+            "A non-living rock"
+          ],
+          "answer": "An organism that makes its own food",
+          "explanation": "Plants are common producers because they make food using light."
+        }
+      ]
+    },
+    {
+      "id": "6-english",
+      "stage": "6",
+      "subject": "English & Literacy",
+      "title": "Main ideas",
+      "level": "Grade 6",
+      "questions": [
+        {
+          "id": "6-english-0",
+          "prompt": "A paragraph describes ways to save water. Its main idea is likely…",
+          "choices": [
+            "Water conservation",
+            "How to draw a map",
+            "A list of planets"
+          ],
+          "answer": "Water conservation",
+          "explanation": "The main idea ties together the supporting details."
+        }
+      ]
+    },
+    {
+      "id": "6-computing",
+      "stage": "6",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 6",
+      "questions": [
+        {
+          "id": "6-computing-0",
+          "prompt": "What does a loop do in a program?",
+          "choices": [
+            "Repeats instructions",
+            "Deletes every file",
+            "Changes the keyboard colour"
+          ],
+          "answer": "Repeats instructions",
+          "explanation": "A loop repeats instructions according to its condition or count."
+        }
+      ]
+    },
+    {
+      "id": "7-math",
+      "stage": "7",
+      "subject": "Mathematics",
+      "title": "Solving simple equations",
+      "level": "Grade 7",
+      "questions": [
+        {
+          "id": "7-math-0",
+          "prompt": "Solve: 3x + 4 = 19. What is x?",
+          "answer": "5",
+          "explanation": "Work one step at a time. The correct result is 5."
+        },
+        {
+          "id": "7-math-1",
+          "prompt": "Solve: 2x − 7 = 9. What is x?",
+          "answer": "8",
+          "explanation": "Work one step at a time. The correct result is 8."
+        },
+        {
+          "id": "7-math-2",
+          "prompt": "Solve: x/3 = 7. What is x?",
+          "answer": "21",
+          "explanation": "Work one step at a time. The correct result is 21."
+        }
+      ]
+    },
+    {
+      "id": "7-science",
+      "stage": "7",
+      "subject": "Science",
+      "title": "Particle models",
+      "level": "Grade 7",
+      "questions": [
+        {
+          "id": "7-science-0",
+          "prompt": "When ice melts, what happens to its molecules?",
+          "choices": [
+            "They can move past one another more freely",
+            "They stop existing",
+            "They turn into a different element"
+          ],
+          "answer": "They can move past one another more freely",
+          "explanation": "Melting changes the arrangement and motion, not the identity, of water molecules."
+        }
+      ]
+    },
+    {
+      "id": "7-english",
+      "stage": "7",
+      "subject": "English & Literacy",
+      "title": "Evidence and claims",
+      "level": "Grade 7",
+      "questions": [
+        {
+          "id": "7-english-0",
+          "prompt": "Which best supports a factual claim?",
+          "choices": [
+            "Relevant, reliable evidence",
+            "The loudest voice",
+            "An unrelated joke"
+          ],
+          "answer": "Relevant, reliable evidence",
+          "explanation": "Evidence should be relevant to the claim and come from a reliable source."
+        }
+      ]
+    },
+    {
+      "id": "7-computing",
+      "stage": "7",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 7",
+      "questions": [
+        {
+          "id": "7-computing-0",
+          "prompt": "What does a loop do in a program?",
+          "choices": [
+            "Repeats instructions",
+            "Deletes every file",
+            "Changes the keyboard colour"
+          ],
+          "answer": "Repeats instructions",
+          "explanation": "A loop repeats instructions according to its condition or count."
+        }
+      ]
+    },
+    {
+      "id": "8-math",
+      "stage": "8",
+      "subject": "Mathematics",
+      "title": "Coordinates and slope",
+      "level": "Grade 8",
+      "questions": [
+        {
+          "id": "8-math-0",
+          "prompt": "A line rises 6 units while moving 3 units right. What is its slope?",
+          "answer": "2",
+          "explanation": "Work one step at a time. The correct result is 2."
+        },
+        {
+          "id": "8-math-1",
+          "prompt": "For y = 3x + 2, what is y when x = 4?",
+          "answer": "14",
+          "explanation": "Work one step at a time. The correct result is 14."
+        },
+        {
+          "id": "8-math-2",
+          "prompt": "What is the y-intercept of y = 2x − 5?",
+          "answer": "-5",
+          "explanation": "Work one step at a time. The correct result is -5."
+        }
+      ]
+    },
+    {
+      "id": "8-science",
+      "stage": "8",
+      "subject": "Science",
+      "title": "Forces",
+      "level": "Grade 8",
+      "questions": [
+        {
+          "id": "8-science-0",
+          "prompt": "What does a net force change?",
+          "choices": [
+            "An object’s velocity",
+            "Its chemical elements",
+            "The number of atoms in the universe"
+          ],
+          "answer": "An object’s velocity",
+          "explanation": "A net force causes acceleration, a change in velocity."
+        }
+      ]
+    },
+    {
+      "id": "8-english",
+      "stage": "8",
+      "subject": "English & Literacy",
+      "title": "Point of view",
+      "level": "Grade 8",
+      "questions": [
+        {
+          "id": "8-english-0",
+          "prompt": "“I opened the door and looked outside” uses which point of view?",
+          "choices": [
+            "First person",
+            "Second person",
+            "Third person"
+          ],
+          "answer": "First person",
+          "explanation": "The narrator uses I to describe their own experience."
+        }
+      ]
+    },
+    {
+      "id": "8-computing",
+      "stage": "8",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 8",
+      "questions": [
+        {
+          "id": "8-computing-0",
+          "prompt": "An algorithm checks each of n items once. Its running time grows…",
+          "choices": [
+            "Linearly with n",
+            "Independently of n",
+            "As n squared in every case"
+          ],
+          "answer": "Linearly with n",
+          "explanation": "One constant-time check per item gives linear, O(n), growth."
+        }
+      ]
+    },
+    {
+      "id": "9-math",
+      "stage": "9",
+      "subject": "Mathematics",
+      "title": "Linear systems",
+      "level": "Grade 9",
+      "questions": [
+        {
+          "id": "9-math-0",
+          "prompt": "If x + y = 10 and x − y = 2, what is x?",
+          "answer": "6",
+          "explanation": "Work one step at a time. The correct result is 6."
+        },
+        {
+          "id": "9-math-1",
+          "prompt": "For y = 2x + 1, what is y when x = 5?",
+          "answer": "11",
+          "explanation": "Work one step at a time. The correct result is 11."
+        },
+        {
+          "id": "9-math-2",
+          "prompt": "Solve: 5x − 3 = 2x + 12. What is x?",
+          "answer": "5",
+          "explanation": "Work one step at a time. The correct result is 5."
+        }
+      ]
+    },
+    {
+      "id": "9-science",
+      "stage": "9",
+      "subject": "Science",
+      "title": "Cells",
+      "level": "Grade 9",
+      "questions": [
+        {
+          "id": "9-science-0",
+          "prompt": "What structure contains most genetic material in a typical animal cell?",
+          "choices": [
+            "The nucleus",
+            "The cell membrane",
+            "A chloroplast"
+          ],
+          "answer": "The nucleus",
+          "explanation": "Most DNA in a typical animal cell is in its nucleus."
+        }
+      ]
+    },
+    {
+      "id": "9-english",
+      "stage": "9",
+      "subject": "English & Literacy",
+      "title": "Argument structure",
+      "level": "Grade 9",
+      "questions": [
+        {
+          "id": "9-english-0",
+          "prompt": "What is a counterargument?",
+          "choices": [
+            "A position that challenges a claim",
+            "A title font",
+            "A repeated spelling mistake"
+          ],
+          "answer": "A position that challenges a claim",
+          "explanation": "Addressing counterarguments can strengthen an argument."
+        }
+      ]
+    },
+    {
+      "id": "9-computing",
+      "stage": "9",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 9",
+      "questions": [
+        {
+          "id": "9-computing-0",
+          "prompt": "An algorithm checks each of n items once. Its running time grows…",
+          "choices": [
+            "Linearly with n",
+            "Independently of n",
+            "As n squared in every case"
+          ],
+          "answer": "Linearly with n",
+          "explanation": "One constant-time check per item gives linear, O(n), growth."
+        }
+      ]
+    },
+    {
+      "id": "10-math",
+      "stage": "10",
+      "subject": "Mathematics",
+      "title": "Quadratic thinking",
+      "level": "Grade 10",
+      "questions": [
+        {
+          "id": "10-math-0",
+          "prompt": "For f(x) = x² − 4, what is f(3)?",
+          "answer": "5",
+          "explanation": "Work one step at a time. The correct result is 5."
+        },
+        {
+          "id": "10-math-1",
+          "prompt": "What is the positive solution of x² = 49?",
+          "answer": "7",
+          "explanation": "Work one step at a time. The correct result is 7."
+        },
+        {
+          "id": "10-math-2",
+          "prompt": "What is the minimum value of y = (x − 2)² + 3?",
+          "answer": "3",
+          "explanation": "Work one step at a time. The correct result is 3."
+        }
+      ]
+    },
+    {
+      "id": "10-science",
+      "stage": "10",
+      "subject": "Science",
+      "title": "Chemical change",
+      "level": "Grade 10",
+      "questions": [
+        {
+          "id": "10-science-0",
+          "prompt": "Which is evidence of a chemical reaction?",
+          "choices": [
+            "A new substance forms",
+            "A ruler is moved",
+            "A book is opened"
+          ],
+          "answer": "A new substance forms",
+          "explanation": "Chemical reactions rearrange atoms into new substances."
+        }
+      ]
+    },
+    {
+      "id": "10-english",
+      "stage": "10",
+      "subject": "English & Literacy",
+      "title": "Rhetorical choices",
+      "level": "Grade 10",
+      "questions": [
+        {
+          "id": "10-english-0",
+          "prompt": "An appeal to evidence and reasoning is often called…",
+          "choices": [
+            "Logos",
+            "Rhyme",
+            "Onomatopoeia"
+          ],
+          "answer": "Logos",
+          "explanation": "Logos refers to appeals based on reasoning."
+        }
+      ]
+    },
+    {
+      "id": "10-computing",
+      "stage": "10",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 10",
+      "questions": [
+        {
+          "id": "10-computing-0",
+          "prompt": "An algorithm checks each of n items once. Its running time grows…",
+          "choices": [
+            "Linearly with n",
+            "Independently of n",
+            "As n squared in every case"
+          ],
+          "answer": "Linearly with n",
+          "explanation": "One constant-time check per item gives linear, O(n), growth."
+        }
+      ]
+    },
+    {
+      "id": "11-math",
+      "stage": "11",
+      "subject": "Mathematics",
+      "title": "Functions and growth",
+      "level": "Grade 11",
+      "questions": [
+        {
+          "id": "11-math-0",
+          "prompt": "For f(x) = 2ˣ, what is f(5)?",
+          "answer": "32",
+          "explanation": "Work one step at a time. The correct result is 32."
+        },
+        {
+          "id": "11-math-1",
+          "prompt": "A quantity doubles every hour. Starting at 3, what is it after 4 hours?",
+          "answer": "48",
+          "explanation": "Work one step at a time. The correct result is 48."
+        },
+        {
+          "id": "11-math-2",
+          "prompt": "For f(x) = 3x² + 1, what is f(2)?",
+          "answer": "13",
+          "explanation": "Work one step at a time. The correct result is 13."
+        }
+      ]
+    },
+    {
+      "id": "11-science",
+      "stage": "11",
+      "subject": "Science",
+      "title": "Energy",
+      "level": "Grade 11",
+      "questions": [
+        {
+          "id": "11-science-0",
+          "prompt": "In an isolated system, total energy is…",
+          "choices": [
+            "Conserved",
+            "Always destroyed",
+            "Created from nothing"
+          ],
+          "answer": "Conserved",
+          "explanation": "Energy can change form while the total remains constant."
+        }
+      ]
+    },
+    {
+      "id": "11-english",
+      "stage": "11",
+      "subject": "English & Literacy",
+      "title": "Evaluating sources",
+      "level": "Grade 11",
+      "questions": [
+        {
+          "id": "11-english-0",
+          "prompt": "Why check a source’s context and author?",
+          "choices": [
+            "To evaluate reliability and perspective",
+            "To avoid reading the evidence",
+            "To count the letters in the title"
+          ],
+          "answer": "To evaluate reliability and perspective",
+          "explanation": "Authorship and context help readers evaluate a source critically."
+        }
+      ]
+    },
+    {
+      "id": "11-computing",
+      "stage": "11",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 11",
+      "questions": [
+        {
+          "id": "11-computing-0",
+          "prompt": "An algorithm checks each of n items once. Its running time grows…",
+          "choices": [
+            "Linearly with n",
+            "Independently of n",
+            "As n squared in every case"
+          ],
+          "answer": "Linearly with n",
+          "explanation": "One constant-time check per item gives linear, O(n), growth."
+        }
+      ]
+    },
+    {
+      "id": "12-math",
+      "stage": "12",
+      "subject": "Mathematics",
+      "title": "An introduction to calculus",
+      "level": "Grade 12",
+      "questions": [
+        {
+          "id": "12-math-0",
+          "prompt": "For f(x) = x², the derivative is 2x. What is the slope at x = 3?",
+          "answer": "6",
+          "explanation": "Work one step at a time. The correct result is 6."
+        },
+        {
+          "id": "12-math-1",
+          "prompt": "For f(x) = 3x², the derivative is 6x. What is the slope at x = 2?",
+          "answer": "12",
+          "explanation": "Work one step at a time. The correct result is 12."
+        },
+        {
+          "id": "12-math-2",
+          "prompt": "The area under y = 2 from x = 0 to x = 4 is a rectangle. What is its area?",
+          "answer": "8",
+          "explanation": "Work one step at a time. The correct result is 8."
+        }
+      ]
+    },
+    {
+      "id": "12-science",
+      "stage": "12",
+      "subject": "Science",
+      "title": "Experimental design",
+      "level": "Grade 12",
+      "questions": [
+        {
+          "id": "12-science-0",
+          "prompt": "Why use a control group in an experiment?",
+          "choices": [
+            "To compare the effect of the tested variable",
+            "To guarantee a preferred answer",
+            "To remove the need for evidence"
+          ],
+          "answer": "To compare the effect of the tested variable",
+          "explanation": "A control provides a comparison for evaluating the treatment effect."
+        }
+      ]
+    },
+    {
+      "id": "12-english",
+      "stage": "12",
+      "subject": "English & Literacy",
+      "title": "Synthesis",
+      "level": "Grade 12",
+      "questions": [
+        {
+          "id": "12-english-0",
+          "prompt": "What does synthesizing sources involve?",
+          "choices": [
+            "Connecting ideas across sources",
+            "Copying one source unchanged",
+            "Ignoring contradictory evidence"
+          ],
+          "answer": "Connecting ideas across sources",
+          "explanation": "Synthesis combines and examines relationships among sources."
+        }
+      ]
+    },
+    {
+      "id": "12-computing",
+      "stage": "12",
+      "subject": "Computing",
+      "title": "Computational thinking",
+      "level": "Grade 12",
+      "questions": [
+        {
+          "id": "12-computing-0",
+          "prompt": "An algorithm checks each of n items once. Its running time grows…",
+          "choices": [
+            "Linearly with n",
+            "Independently of n",
+            "As n squared in every case"
+          ],
+          "answer": "Linearly with n",
+          "explanation": "One constant-time check per item gives linear, O(n), growth."
+        }
+      ]
+    }
+  ]
+}
