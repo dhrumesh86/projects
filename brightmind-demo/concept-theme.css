@@ -1,0 +1,52 @@
+/* Concept direction: sky islands, tactile violet controls, calm readable workspaces.
+   Artwork is decorative; progress and interaction remain real app state. */
+:root{--bg:#f2f3ff;--ink:#211345;--muted:#60577b;--line:#ded9fa;--violet:#7434da;--violet-soft:#f1eaff;--teal:#6d35d5;--teal-dark:#5424aa;--grad-primary:linear-gradient(180deg,#a15af4,#7130dc 65%,#5720bb);--shadow:0 3px 5px #51408a08,0 12px 30px #51408a0c;--radius:22px}
+body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3,.display{font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;letter-spacing:-.035em}
+.panel-body{background:radial-gradient(ellipse at 90% 0,#cfeaff88,transparent 55%),linear-gradient(160deg,#fbfcff,#f1efff)}
+.wrap{max-width:1440px;margin:auto;padding:12px 32px 72px}
+.panel-head{background:#fffefc;border-bottom:1px solid #d8d6f4;padding:16px 26px}
+.panel-head h2{letter-spacing:-.025em}.ph-prog{background:#f2edff;border-color:#d4c5f6;color:#5925a9}
+.ph-helper{background:var(--grad-primary);border-color:#8c50df;box-shadow:0 3px 0 #492080}
+.app-rail{background:linear-gradient(165deg,#15294e,#191c4a 70%,#273c65)}
+.rail-tab{border-radius:14px;background:transparent;color:#e6e6fa;min-height:48px}
+.rail-tab.sel{background:var(--grad-primary);border-color:#bc9aff;box-shadow:inset 0 1px 0 #ffffff66,0 4px 12px #0e102744}
+.rail-brand{font-family:ui-rounded,system-ui!important}.rail-brand small{font-family:inherit!important}
+.btn{border-color:#d8ccf8;box-shadow:0 2px 0 #b9a8df33;background:linear-gradient(#fff,#f4f0ff);color:#4e2294;border-radius:15px}
+.btn.primary,.btn.continue{background:var(--grad-primary);color:#fff;border:1px solid #8846d9;box-shadow:inset 0 1px 0 #ffffff66,0 4px 0 #5420ad,0 8px 16px #6632b522}
+.btn.coral{background:linear-gradient(#159db9,#08768f);border-color:#08768f;color:#fff}
+.btn:hover:not(:disabled){filter:brightness(1.04);box-shadow:0 4px 14px #6e42b82b}
+.btn:focus-visible,button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #087c9d;outline-offset:4px}
+.card,.world,.qbox,.sheet{border:1px solid #dcd5f5;border-radius:22px;box-shadow:var(--shadow)}
+.card{background:linear-gradient(135deg,#fff,#fcfbff)}
+.hero{background:#d9efff url('assets/discovery-islands.svg') center/cover;color:var(--ink);border-color:#d4d5f5;min-height:340px;border-radius:28px;padding:38px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;background:url('assets/4f7d81a3ebfaecf6.webp') no-repeat 6% bottom/auto 92%;z-index:-1}
+.hero-copy{margin-left:38%;width:62%;padding:24px;background:#ffffffed;border:1px solid #fff;border-radius:24px;box-shadow:0 8px 24px #4c388111}
+.hero h1{color:#29144e;font-size:clamp(1.9rem,3.3vw,3.2rem);max-width:660px}.hero p{color:#504369;font-weight:500}
+.hero .pill{background:#eee2ff;color:#5922a2;border:1px solid #d4bdf2;font-size:.76rem;letter-spacing:.06em;text-transform:uppercase}
+.hero-stats span{background:#f9f5ff;border:1px solid #dfd3f4;color:#54377b}.hero-stats b{color:#5826a3}
+.hero .hero-secondary{color:#5424aa!important;background:#fff!important;border-color:#cdbce8!important}
+.explore-intro{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 24px;padding:20px 26px;margin:10px 0 20px;background:linear-gradient(110deg,#f2eaff,#e7f9ff)}
+.explore-intro .tag,.explore-intro h2,.explore-intro p{grid-column:1}.explore-intro .tag{justify-self:start}.explore-intro .btn.big{grid-column:2;grid-row:1 / 4}
+.explore-intro .display{font-size:1.4rem;margin:5px 0}.explore-intro p{margin:5px 0;max-width:700px}.explore-intro .btn.big{width:auto;flex-shrink:0;font-size:.95rem;min-height:50px}
+.profile-card{overflow:hidden;text-align:left;transition:transform .15s,box-shadow .15s}.profile-card:hover{transform:translateY(-3px);box-shadow:0 12px 26px #6551a822}
+.profile-scene{height:100px;background-image:url('assets/discovery-islands.svg');background-size:cover;background-position:center 42%}
+.profile-scene.story{background-position:80% 70%}.profile-body{padding:24px}.profile-body h2{font-size:1.6rem}
+.profile-body .avatar{background:linear-gradient(140deg,#e8dbff,#e3faff);color:#5827a0;border:2px solid #c8b0ed}
+.path-overall{background:linear-gradient(120deg,#fff,#f1f0ff)}.tag,.world-tag{background:#eee5ff;color:#5c269c;border:1px solid #dac8f4}
+.code-hero{background:linear-gradient(115deg,#f0e6ff,#e4f9ff);border:1px solid #d6c6f1;color:#321552}.code-hero p{color:#58466e}
+.cq-project{border-radius:22px;box-shadow:var(--shadow);border-color:#ded3f5}.cq-art{border-bottom:1px solid #ded3f5}
+.cq-project .world-body h3{font-size:1.3rem}.cq-project .btn{margin-top:auto}
+.qbox.current-q{border-color:#9163dc;box-shadow:0 0 0 3px #f1e7ff}.qprogress{background:linear-gradient(110deg,#7d39d4,#5846bf)}
+.choices button{border-radius:18px;border-color:#d3c0ef}.bubble{background:#f5f0ff;border-color:#dcd0f2}
+.draw-qside{background:linear-gradient(#f4eaff,#eff9ff);border-color:#ba9ae8}.canvas-wrap{background:#fff}
+.concept-journey{margin:18px 0 24px}.concept-journey h2{font-size:1.35rem;margin-bottom:14px}.concept-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.concept-action{display:flex;align-items:center;gap:14px;text-align:left;padding:18px;border:1px solid #d7cef0;border-radius:20px;background:linear-gradient(135deg,#fff,#f4eeff);color:#32174f;min-height:100px;box-shadow:var(--shadow)}
+.concept-action:nth-child(2){background:linear-gradient(135deg,#fff,#e6f9ff)}.concept-action:nth-child(3){background:linear-gradient(135deg,#fff,#fff5df)}
+.concept-action .concept-icon{font-size:2rem;background:#fff;border:1px solid #ded6f1;border-radius:16px;width:56px;height:56px;display:grid;place-items:center;flex-shrink:0}.concept-action strong{display:block;font-size:1.1rem}.concept-action small{display:block;margin-top:4px;color:#645777;line-height:1.4}
+.mobile-nav{border-radius:22px 22px 0 0}.mobile-nav button[aria-current="page"]{background:linear-gradient(#eee1ff,#e5d9ff);color:#6022b6}
+@media(min-width:1100px){:root{--rail-w:205px}.app-rail{padding:18px 12px}.rail-label{opacity:1;font-size:.86rem}.app-rail:hover{width:var(--rail-w)}.rail-tab{gap:8px}.rail-brand .rail-mascot{width:34px;flex-basis:34px}.app-rail .rail-brand{gap:5px}.rail-brand .rail-label{font-size:.93rem}.app-rail{overflow-y:auto}.rail-tab .ric{flex-basis:28px}}
+@media(max-width:1099px){.wrap{padding:8px 20px 80px}.hero{padding:22px}.hero-copy{margin-left:32%;width:68%}.explore-intro{display:block}.explore-intro .btn.big{margin-top:12px}.concept-actions{gap:10px}.concept-action{padding:14px;gap:10px}.concept-action .concept-icon{width:42px;height:42px;font-size:1.5rem}}
+@media(max-width:620px){.wrap{padding:6px 14px 96px}.panel-head{padding:12px 14px}.panel-head h2{font-size:1.1rem}.hero{padding:150px 14px 14px;min-height:0;margin-top:12px;background-position:70% center}.hero::before{background-position:18px 5px;background-size:auto 170px}.hero-copy{margin:0;width:100%;padding:22px 18px;background:#fffffffa}.hero h1{font-size:2rem}.hero p{font-size:.92rem}.hero-stats{gap:6px}.hero-stats span{font-size:.74rem;padding:6px 8px}.explore-intro{padding:18px;margin-top:6px}.explore-intro .display{font-size:1.28rem}.explore-intro p{font-size:.86rem}.explore-intro .btn.big{width:100%;font-size:.85rem}.profile-body{padding:18px}.profile-scene{height:80px}.concept-actions{grid-template-columns:1fr}.concept-action{min-height:80px}.concept-action strong{font-size:1rem}.mobile-nav button{font-size:.68rem;min-width:54px}.mobile-nav{padding-top:8px}.code-hero{padding:22px 18px}.card,.world,.qbox{border-radius:18px}}
+@media(max-width:620px){.panel-head .ph-right{display:grid;grid-template-columns:44px minmax(0,1fr) auto;width:100%;margin-left:0;gap:6px}.panel-head .ph-helper{width:44px;min-width:44px}.panel-head .ph-prog,.panel-head .ph-chip{font-size:.69rem;padding:5px 7px;border-width:1px;min-width:0}.panel-head .ph-avatar{width:36px;height:36px;flex-basis:36px}.panel-head .ph-avatar img{width:34px;height:34px}.panel-head{gap:6px;padding:8px 14px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

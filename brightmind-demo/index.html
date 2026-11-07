@@ -402,6 +402,7 @@ label.qprompt{display:block;margin-bottom:12px}
 @media(max-width:680px){.code-hero .code-mascot{display:none}.code-hero p{max-width:100%}}
 
 </style>
+<link rel="stylesheet" href="concept-theme.css"/>
 </head>
 <body><div style="background:#fff3cd;color:#5b4a00;text-align:center;font:600 14px/1.4 system-ui,sans-serif;padding:8px 12px;border-bottom:2px solid #f0c040;">Reference workspace — Dhyey Patel and Dhyan Patel are test profiles. Progress stays in this visit unless connected to your private family server.</div>
 <!-- Rexy kit icon sprite (assets/rexy-icons.svg, inlined so <use> works everywhere) -->
@@ -459,8 +460,8 @@ label.qprompt{display:block;margin-bottom:12px}
   <div class="hero">
     <div class="hero-copy">
       <span class="pill">Start here — grown-ups first</span>
-      <h1>A world of learning. A place for you.</h1>
-      <p>Pick a learner below — or jump straight back in. Dhyey and Dhyan each have their own lessons, their own stars, and their own progress. Nothing ever mixes between them.</p>
+      <h1>What will you discover today?</h1>
+      <p>Learn a little, create something, and follow your curiosity. Choose a family test profile below, or explore starter lessons from preschool to Grade 12.</p>
       <div class="hero-stats"><span>👦 <b>Dhyey</b> • Grade 2</span><span>🧒 <b>Dhyan</b> • JK, age 4</span><span>🇨🇦 Ontario topics</span></div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
         <button class="btn continue" onclick="continueAdventure()">Continue my adventure →</button>
@@ -881,7 +882,7 @@ function syncMobileNav(){
   document.querySelectorAll('.mobile-nav button[data-mnav]').forEach(function(b){
     var k=b.getAttribute('data-mnav');
     if(k==='more'){ b.removeAttribute('aria-current'); return; }
-    if(k===sec || (k==='learner' && (sec==='lesson'||sec==='workbook'||sec==='draw'))) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current');
+    if(k===sec || (k==='learner' && (sec==='lesson'||sec==='workbook'))) b.setAttribute('aria-current','page'); else b.removeAttribute('aria-current');
   });
 }
 function railGo(sec,btn){
@@ -1919,5 +1920,6 @@ renderHomeProgress();
 <script src="connected.js" defer></script>
 <script src="universal.js" defer></script>
 <script src="tracker.js" defer></script>
+<script src="concept-ui.js" defer></script>
 </body>
 </html>

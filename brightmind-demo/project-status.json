@@ -8,7 +8,8 @@
     "Added responsive 3 / 2 / 1-column coding cards",
     "Added preschool to Grade 12 catalogue starter samples",
     "Connected local family lessons to server grading and progress",
-    "Tested mobile learner selection, grading, saved results and parent review"
+    "Tested mobile learner selection, grading, saved results and parent review",
+    "Applied supplied visual concepts: sky-island home, violet controls, clearer learning cards and responsive quick actions"
   ],
   "next": [
     "Complete parent authentication and device authorization",
@@ -16,7 +17,8 @@
     "Replace fixed family profiles with an extensible student database",
     "Persist coding projects, learning paths and all-grade lesson evidence",
     "Expand and review country-specific curricula and accessibility",
-    "Add encrypted database backups using existing Google Drive storage"
+    "Add encrypted database backups using existing Google Drive storage",
+    "Continue concept rollout: reading library, discovery experiments, planner and reviewed learning evidence"
   ],
   "enquiries": [
     {

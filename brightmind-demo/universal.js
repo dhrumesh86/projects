@@ -25,7 +25,7 @@
   home.innerHTML = '<span class="tag">A WORLD OF POSSIBILITIES</span><h2 class="display">Learning has no single starting line.</h2>' +
     '<p>Explore preschool through Grade 12: Mathematics, Science, English &amp; Literacy, and Computing. Find your level. Follow your curiosity.</p>' +
     '<button class="btn primary big" id="explore-home">🌍 Explore all grades &amp; subjects</button>';
-  document.getElementById('view-home').prepend(home);
+  (document.querySelector('.concept-journey') || document.querySelector('#view-home .hero')).after(home);
   document.getElementById('explore-home').onclick = () => openExplore();
   window.openExplore = function () { render(); showView('explore'); };
 

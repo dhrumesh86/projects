@@ -14,23 +14,77 @@
     patterning: ['g2_patterns'], reading: ['g2_reading'],
     counting: ['jk_counting'], numberRecog: ['jk_counting'], letterSounds: ['jk_letters']
   };
-  let profiles = {}, activeLesson = null, loading = 0;
+  let profiles = {}, activeLesson = null, loading = 0, csrfToken = '';
+  let loginPending = null;
+
+  function parentSignIn(reloadAfter = false) {
+    if (loginPending) return loginPending;
+    loginPending = new Promise(resolve => {
+      const dialog = document.createElement('dialog');
+      dialog.setAttribute('aria-labelledby', 'family-login-title');
+      dialog.style.cssText = 'border:0;border-radius:22px;padding:28px;max-width:min(440px,92vw);color:#10194d';
+      dialog.innerHTML = '<h2 id="family-login-title">Welcome to your family workspace</h2>' +
+        '<p>A parent signs in before saved student records can be opened.</p>' +
+        '<form id="family-login-form"><label for="family-login-pin">Parent PIN</label>' +
+        '<input id="family-login-pin" type="password" autocomplete="current-password" required maxlength="256" style="display:block;width:100%;padding:12px;margin:12px 0;font:inherit">' +
+        '<button class="btn primary" type="submit">Sign in</button><p id="family-login-message" role="status"></p></form>';
+      document.body.appendChild(dialog);
+      dialog.addEventListener('cancel', event => event.preventDefault());
+      dialog.showModal();
+      dialog.querySelector('input').focus();
+      dialog.querySelector('form').addEventListener('submit', async event => {
+        event.preventDefault();
+        const input = dialog.querySelector('input'), button = dialog.querySelector('button');
+        const pin = input.value;
+        input.value = ''; button.disabled = true;
+        try {
+          const data = await api('/api/auth/login', {pin});
+          csrfToken = data.csrf_token;
+          dialog.close(); dialog.remove(); loginPending = null;
+          resolve();
+          if (reloadAfter) location.reload();
+        } catch (error) {
+          dialog.querySelector('#family-login-message').textContent = error.message;
+          button.disabled = false; input.focus();
+        }
+      });
+    });
+    return loginPending;
+  }
   async function api(route, body, headers = {}) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 15000);
     try {
       const response = await fetch(route, {method: body ? 'POST' : 'GET',
-        headers: {'Content-Type': 'application/json', ...headers},
+        headers: {'Content-Type': 'application/json', ...(body && csrfToken ? {'X-CSRF-Token': csrfToken} : {}), ...headers},
+        credentials: 'same-origin',
         body: body ? JSON.stringify(body) : undefined,
         cache: 'no-store', signal: controller.signal});
       const data = await response.json();
+      if (response.status === 401 && route !== '/api/auth/login') {
+        csrfToken = '';
+        void parentSignIn(true);
+      }
       if (!response.ok) throw new Error(data.error || 'The server could not complete this request.');
       return data;
     } finally { clearTimeout(timer); }
   }
 
   try {
-    await api('/api/health');
+    const health = await api('/api/health');
+    if (health.authentication_required) {
+      const session = await api('/api/auth/session');
+      if (session.authenticated) csrfToken = session.csrf_token;
+      else await parentSignIn();
+      const logout = document.createElement('button');
+      logout.className = 'rail-tab'; logout.setAttribute('aria-label', 'Sign out family device');
+      logout.innerHTML = '<span class="ric" aria-hidden="true">↪</span><span class="rail-label">Sign out</span>';
+      logout.onclick = async () => {
+        await api('/api/auth/logout', {});
+        csrfToken = ''; location.reload();
+      };
+      document.getElementById('app-rail').insertBefore(logout, document.getElementById('rail-toggle'));
+    }
     const data = await api('/api/students');
     for (const [ui, grade] of [['aarav', '2'], ['meera', 'JK']]) {
       const match = Object.entries(data.students).find(([, child]) => String(child.grade) === grade);
