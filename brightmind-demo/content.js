@@ -3,7 +3,7 @@
    publish. Revert restores the previous version of this file. */
 window.BRIGHTMIND_CONTENT = {
   "version": 1,
-  "generated_at": "2026-11-10T00:41:39.116129+00:00",
+  "generated_at": "2026-11-10T00:42:10.946160+00:00",
   "batches": [
     "20261107-151728",
     "20261109-193904",
@@ -75,6 +75,19 @@ window.BRIGHTMIND_CONTENT = {
         "blocks": null,
         "praise": "Yes! 5 is right. Great work!",
         "src": "q-2-subtraction_2digit-20261109-193922-002"
+      },
+      {
+        "q": "Leo has 42 Lego bricks in a box. He uses 39 bricks to build a cool car. How many bricks are left in the box?",
+        "choices": [
+          "3",
+          "13",
+          "4"
+        ],
+        "answer": "3",
+        "hint": "Count up from the smaller number to reach the bigger one.",
+        "blocks": null,
+        "praise": "Yes! 3 is right. Great work!",
+        "src": "q-2-subtraction_2digit-20261109-193922-003"
       }
     ],
     "placeValue": [
