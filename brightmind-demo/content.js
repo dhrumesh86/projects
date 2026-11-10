@@ -3,9 +3,11 @@
    publish. Revert restores the previous version of this file. */
 window.BRIGHTMIND_CONTENT = {
   "version": 1,
-  "generated_at": "2026-11-08T03:08:21.489056+00:00",
+  "generated_at": "2026-11-10T00:41:39.116129+00:00",
   "batches": [
-    "20261107-151728"
+    "20261107-151728",
+    "20261109-193904",
+    "20261109-193922"
   ],
   "items": {
     "addSub": [
@@ -47,6 +49,73 @@ window.BRIGHTMIND_CONTENT = {
         "blocks": null,
         "praise": "Yes! 93 is right. Great work!",
         "src": "q-2-addition_2digit-20261107-151728-003"
+      },
+      {
+        "q": "Leo has 90 Lego bricks in a big box. He uses 23 bricks to build a small car. How many bricks are left in the box?",
+        "choices": [
+          "77",
+          "67",
+          "57"
+        ],
+        "answer": "67",
+        "hint": "Try taking away the tens first and then the ones.",
+        "blocks": null,
+        "praise": "Yes! 67 is right. Great work!",
+        "src": "q-2-subtraction_2digit-20261109-193922-001"
+      },
+      {
+        "q": "Leo has 83 red Lego bricks. He uses 78 bricks to build a big fire truck. How many red bricks are left over?",
+        "choices": [
+          "15",
+          "6",
+          "5"
+        ],
+        "answer": "5",
+        "hint": "Try counting on from 78 to reach 83.",
+        "blocks": null,
+        "praise": "Yes! 5 is right. Great work!",
+        "src": "q-2-subtraction_2digit-20261109-193922-002"
+      }
+    ],
+    "placeValue": [
+      {
+        "q": "Leo has 10 Lego bricks. He snaps them together to make one long rod. How many tens does the number 10 have?",
+        "choices": [
+          "11",
+          "2",
+          "1"
+        ],
+        "answer": "1",
+        "hint": "Think about how many groups of ten you can make with these bricks.",
+        "blocks": null,
+        "praise": "Yes! 1 is right. Great work!",
+        "src": "q-2-place_value-20261109-193904-001"
+      },
+      {
+        "q": "Sam has 22 small Lego bricks. How many ones are in the number 22?",
+        "choices": [
+          "2",
+          "12",
+          "3"
+        ],
+        "answer": "2",
+        "hint": "The ones digit is the number on the far right.",
+        "blocks": null,
+        "praise": "Yes! 2 is right. Great work!",
+        "src": "q-2-place_value-20261109-193904-002"
+      },
+      {
+        "q": "Leo has 26 Lego blocks on the floor. He puts them in a box. How many ones are in the number 26?",
+        "choices": [
+          "16",
+          "6",
+          "7"
+        ],
+        "answer": "6",
+        "hint": "Look at the digit on the right side of the number.",
+        "blocks": null,
+        "praise": "Yes! 6 is right. Great work!",
+        "src": "q-2-place_value-20261109-193904-003"
       }
     ]
   }
