@@ -1,52 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dhrumesh Patel — Projects</title>
-<link rel="stylesheet" href="style.css">
+<title>Project Tracker — All Projects</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f4f6f8; color: #1c2430; line-height: 1.45;
+  }
+  header {
+    background: #14213d; color: #fff; padding: 28px 20px 22px;
+  }
+  header .wrap, main .wrap { max-width: 1180px; margin: 0 auto; }
+  h1 { margin: 0 0 6px; font-size: 1.9rem; letter-spacing: -0.02em; }
+  header p { margin: 4px 0; color: #c9d4e6; }
+  header p.updated { color: #ffd166; font-weight: 600; }
+  .rules {
+    background: #fff; border: 1px solid #d8dee6; border-left: 5px solid #14213d;
+    border-radius: 8px; padding: 14px 18px; margin: 18px 0 22px;
+  }
+  .rules h2 { margin: 0 0 8px; font-size: 1.05rem; }
+  .rules ol { margin: 0; padding-left: 20px; }
+  .rules li { margin: 4px 0; }
+  main { padding: 0 20px 40px; }
+  .table-scroll { overflow-x: auto; background: #fff; border: 1px solid #d8dee6; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; min-width: 960px; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid #e3e8ee; }
+  thead th {
+    background: #14213d; color: #fff; font-size: 0.85rem; text-transform: uppercase;
+    letter-spacing: 0.04em; white-space: nowrap; position: sticky; top: 0;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #f8fafc; }
+  td.project { font-weight: 700; white-space: nowrap; }
+  td .sub { display: block; font-weight: 400; color: #5b6b80; font-size: 0.85rem; margin-top: 2px; }
+  code { background: #eef1f5; padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  .pill {
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    font-size: 0.82rem; font-weight: 700; white-space: nowrap;
+  }
+  .pill.live     { background: #d9f2e2; color: #14532d; }
+  .pill.done     { background: #dbeafe; color: #1e3a8a; }
+  .pill.building { background: #e0e7ff; color: #3730a3; }
+  .pill.blocked  { background: #fee2e2; color: #7f1d1d; }
+  .pill.waiting  { background: #fef3c7; color: #78350f; }
+  .pill.nearly   { background: #ccfbf1; color: #134e4a; }
+  .pill.ready    { background: #dcfce7; color: #166534; }
+  .pill.built    { background: #e0f2fe; color: #0c4a6e; }
+  .pill.parked  { background: #e5e7eb; color: #374151; }
+  .pill.needs-you { background: #ffedd5; color: #7c2d12; }
+  .review-pending { color: #92400e; font-weight: 600; }
+  .review-done { color: #166534; font-weight: 600; }
+  .review-na { color: #64748b; }
+  footer { max-width: 1180px; margin: 0 auto; padding: 0 20px 32px; color: #5b6b80; font-size: 0.88rem; }
+  footer p { margin: 6px 0; }
+  @media (max-width: 640px) {
+    h1 { font-size: 1.5rem; }
+    header { padding: 20px 16px 16px; }
+    main { padding: 0 12px 28px; }
+    footer { padding: 0 12px 24px; }
+  }
+</style>
 </head>
 <body>
 <header>
-  <h1>Dhrumesh Patel — Projects</h1>
-  <p>Personal projects, built for family and community. Small tools, done properly.</p>
+  <div class="wrap">
+    <h1>Project Tracker</h1>
+    <p>Every project in one place — status, blockers, next step, last check-in, and code review.</p>
+    <p class="updated">Last updated: November 13, 2026</p>
+  </div>
 </header>
+
 <main>
-  <div class="grid">
-    <div class="card">
-      <h2><a href="brightmind.html">BrightMind AI</a></h2>
-      <p>A personal AI tutor for kids — Ontario curriculum, step-by-step teaching, never just the answer.</p>
-      <span class="badge active">In active development</span>
-    </div>
-    <div class="card">
-      <h2><a href="rexy-learn.html">Rexy Learn</a></h2>
-      <p>Offline Android practice app for kids — Math, Language Arts and Science, JK to Grade 12.</p>
-      <span class="badge done">v1.0 delivered</span>
-    </div>
-    <div class="card">
-      <h2><a href="ace-trader.html">ACE Trader</a></h2>
-      <p>Paper-trading research tool — scans the market, debates the trade, paper money only.</p>
-      <span class="badge active">In active development</span>
-    </div>
-    <div class="card">
-      <h2><a href="ai-content-empire.html">AI Content Empire</a></h2>
-      <p>An experiment in zero-cost AI video production — scripts, voices and assembly, approval-gated.</p>
-      <span class="badge paused">Paused</span>
-    </div>
-    <div class="card">
-      <h2><a href="gurukul.html">Gurukul School Manager</a></h2>
-      <p>A free management system for a community school — enrolments, fees, attendance and schedules.</p>
-      <span class="badge paused">Built, not adopted</span>
-    </div>
-    <div class="card">
-      <h2><a href="qt-portfolio.html">Portfolio Research</a></h2>
-      <p>Long-term ETF investing research — how the pieces fit together, and what they cost.</p>
-      <span class="badge research">Ongoing research</span>
+  <div class="wrap">
+    <section class="rules" aria-label="Standing rules">
+      <h2>Standing rules</h2>
+      <ol>
+        <li><strong>Code review:</strong> Muse is the user's assistant and orchestrator — Claude Code, Gemini Code Assist, and GitHub Copilot write the code, and Muse reviews everyone's work. All code from any of the three tools gets reviewed by Muse before it's treated as done.</li>
+        <li><strong>Daily check-in:</strong> code gets committed to GitHub daily, so the last-check-in date on this page shows where gaps are.</li>
+      </ol>
+    </section>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Status</th>
+            <th>Done so far</th>
+            <th>Next step / blocked by</th>
+            <th>Last check-in (commit)</th>
+            <th>Code review</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="project">BrightMind AI tutor</td>
+            <td><span class="pill live">Live</span></td>
+            <td>Demo live at dhrumesh86.github.io/projects/brightmind-demo/ (commit <code>1ecd1ad9</code>, Nov 7, 2026). Content auto-publish on — 9 items live (<code>d7f51717</code>, <code>04a6e987</code>, <code>8acdc874</code>). VoiceStudio voice on.</td>
+            <td>Live AI is local Ollama only (OmniRoute removed, no replacement chosen). Open decisions: Ollama 3b vs 7b, parent-dashboard PIN, Postgres instead of SQLite, daily content schedule.</td>
+            <td>Nov 9, 2026 (<code>8acdc874</code>)</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Ace Trader — day trading</td>
+            <td><span class="pill built">Built</span></td>
+            <td>Full pipeline built: scanner, entry, exit, Time Machine, budget, news gate, alerts, driver + IBKR paper brackets. 315/315 skill tests, 57/57 new tests; graphify updated (2,766 nodes). Committed to GitHub Nov 13, 2026 (<code>669901b</code>) and reviewed by Muse. Mode OFF by default.</td>
+            <td>Live bracket check (owner must start IB Gateway + log in to paper), live-hours dry run, then switch-on. No scheduler yet.</td>
+            <td>Nov 13, 2026 (<code>669901b</code>)</td>
+            <td class="review-done">Done — reviewed by Muse</td>
+          </tr>
+          <tr>
+            <td class="project">Ace Trader — trader skill <span class="sub">fundamentals + swing</span></td>
+            <td><span class="pill waiting">Waiting on you</span></td>
+            <td>Analysis done Nov 13, 2026: trader-skill (11 skills) tested 175/175 on VM + PC, vendored to D:\Ace-Trader\trader-skill\. Biggest gap found: Ace has NO fundamentals (scoring is only a has_recent_10q boolean). Ranked build order: analyst + screener first, then copycat, budget, news, tax, rebalance, alerts. Plan doc written.</td>
+            <td>Swing mode DECIDED: auto-trade under the gates (same as day trades). Still needed from the user: SEC user agent (name + email); screener rules, universe, investors to copy, swing budget, position cap, Pelosi still open (plan defaults proposed). Build blocked tonight by Gemini quota exhaustion — Phase 1 (analyst + screener, no orders) runs after a second key is verified or the quota resets. Note: new config goes in trader/config.json, not trading.yaml; swing sleeve needs its own $10,000 paper account.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Ace Trader — options premium</td>
+            <td><span class="pill blocked">Blocked</span></td>
+            <td>Strategy designed (16-delta SPY bull put spread). Phase 0 verified (Questrade options data live). 5% budget approved.</td>
+            <td>Blocked by the Gemini gateway — the first build failed on a third-party token limit. Next: rerun the build through the gateway.</td>
+            <td>Nov 13, 2026 (<code>669901b</code>)</td>
+            <td class="review-pending">Pending</td>
+          </tr>
+          <tr>
+            <td class="project">Ace Trader — core</td>
+            <td><span class="pill live">Live</span></td>
+            <td>Questrade market data verified live. Auto-trader enabled, 0 qualifying signals recently.</td>
+            <td>IB Gateway down since Nov 5 — needs the owner to log in.</td>
+            <td>Nov 13, 2026 (<code>669901b</code>)</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Gemini gateway + Claude Code <span class="sub">both PCs</span></td>
+            <td><span class="pill blocked">Blocked</span></td>
+            <td>Dhrumesh PC: gateway DONE and running (127.0.0.1:8080, 2 keys, health OK); /v1 launcher bug + thoughtSignature bug fixed; models verified (50 incl. pro-preview + 3.5-flash); smoke (a) passed, smoke (b) PROVEN exit=0 with rotation across both keys. Dharvi PC: Claude Code 2.1.325 installed, local gateway running, smoke test passed (file-based only).</td>
+            <td>Dharvi gateway likely needs the same thoughtSignature fix as Dhrumesh. Second key ADDED + VERIFIED this evening (pool entry "second"; gateway restarted, health 200) — but pro-preview 429s on BOTH keys, so all successful work is on gemini-3.5-flash; the second key buys ~20 flash requests/day headroom, not pro access. Starter key exhausted until the 03:00 EST Sat Nov 14 reset; second flash still available. Build-length run still unproven. Next: multi-provider gateway extension build UNDERWAY (started 17:54 EST) — Gemini first, then OpenAI API (key provided); Claude/Grok/Groq as disabled slots until keys are provided. Then the options build. (ChatGPT subscription itself is not wireable — only the OpenAI API key.) No NSSM service yet.</td>
+            <td>—</td>
+            <td class="review-pending">Pending</td>
+          </tr>
+          <tr>
+            <td class="project">VS Code + Git + Copilot <span class="sub">both PCs</span></td>
+            <td><span class="pill done">Done</span></td>
+            <td>Done on both PCs — Dharvi: VS Code 1.146.0; Dhrumesh: VS Code 1.144.0. Code Assist v2.107.0, Copilot v1.388.0, git identity set, GitHub access verified.</td>
+            <td>Still needs the user: Google sign-in (Code Assist), GitHub sign-in + Copilot plan, VS Code restart. Note: Code Assist has no API-key setting — it uses Google sign-in, not the API key.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Webull adapter + API</td>
+            <td><span class="pill parked">Parked</span></td>
+            <td>Sign-in succeeded Nov 13, 2026, but there is NO self-service Generate Key step on webull.ca (Developer Tool opens MCP Management only) and developer.webull.com is unreachable. The Canadian API route — email support@webull.ca with company name + redirect URL — is on hold unless the user revives it.</td>
+            <td>None — parked by user decision (Nov 13, 2026): stop chasing Webull, focus on building Ace Trader.</td>
+            <td>—</td>
+            <td class="review-pending">Pending</td>
+          </tr>
+          <tr>
+            <td class="project">YouTube monetization</td>
+            <td><span class="pill ready">Ready</span></td>
+            <td>11 YouTube skills installed on both PCs, tools verified, voice.md filled with a starter voice.</td>
+            <td>User shares 3 videos to write the real voice; first script.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Graphify</td>
+            <td><span class="pill done">Done</span></td>
+            <td>Code graphs built for Ace Trader (1,212 nodes), pc-tutor, cloud-tutor; hooks installed.</td>
+            <td>Keep graphs current with <code>graphify update</code> after code changes.</td>
+            <td>—</td>
+            <td class="review-done">Done</td>
+          </tr>
+          <tr>
+            <td class="project">Promptmaster <span class="sub">better Claude Code prompts</span></td>
+            <td><span class="pill done">Done</span></td>
+            <td>Skill installed on both PCs (verified). Standing Ace Trader rules locked into a decisions file (D:\Ace-Trader\.claude\decisions.md, 2,107 bytes). Options build prompt rewritten as v2 (9,195 bytes), on the Dhrumesh PC next to v1 (untouched).</td>
+            <td>Use the v2 prompt for the options build rerun once the gateway is ready.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </main>
+
 <footer>
-  <p>Personal projects. No accounts, no sign-ups, no tracking. Source code is private; these pages describe the work only.</p>
+  <p>Commit dates verified against GitHub on Nov 13, 2026 (dhrumesh86/projects, dhrumesh86/ace-trader, dhrumesh86/brightmind-ai). “—” means no repo commit applies to that row.</p>
+  <p>Code review means Muse reviews code from all three coding tools — Claude Code, Gemini Code Assist, and GitHub Copilot — before it counts as done. No private values appear on this page; only statuses and short commit SHAs.</p>
 </footer>
 </body>
 </html>
