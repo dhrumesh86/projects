@@ -117,7 +117,7 @@
             <td class="project">Ace Trader — trader skill <span class="sub">fundamentals + swing</span></td>
             <td><span class="pill waiting">Waiting on you</span></td>
             <td>Analysis done Nov 13, 2026: trader-skill (11 skills) tested 175/175 on VM + PC, vendored to D:\Ace-Trader\trader-skill\. Biggest gap found: Ace has NO fundamentals (scoring is only a has_recent_10q boolean). Ranked build order: analyst + screener first, then copycat, budget, news, tax, rebalance, alerts. Plan doc written.</td>
-            <td>Swing mode DECIDED: auto-trade under the gates (same as day trades). Still needed from the user: SEC user agent (name + email); screener rules, universe, investors to copy, swing budget, position cap, Pelosi still open (plan defaults proposed). Build blocked tonight by Gemini quota exhaustion — Phase 1 (analyst + screener, no orders) runs after the quota reset or a second key. Note: new config goes in trader/config.json, not trading.yaml; swing sleeve needs its own $10,000 paper account.</td>
+            <td>Swing mode DECIDED: auto-trade under the gates (same as day trades). Still needed from the user: SEC user agent (name + email); screener rules, universe, investors to copy, swing budget, position cap, Pelosi still open (plan defaults proposed). Build blocked tonight by Gemini quota exhaustion — Phase 1 (analyst + screener, no orders) runs after a second key is verified or the quota resets. Note: new config goes in trader/config.json, not trading.yaml; swing sleeve needs its own $10,000 paper account.</td>
             <td>—</td>
             <td class="review-na">n/a</td>
           </tr>
@@ -141,7 +141,7 @@
             <td class="project">Gemini gateway + Claude Code <span class="sub">both PCs</span></td>
             <td><span class="pill blocked">Blocked</span></td>
             <td>Dhrumesh PC: gateway DONE and running (127.0.0.1:8080, starter key, health OK); /v1 launcher bug fixed; models verified (50 incl. pro-preview + 3.5-flash); smoke (a) passed, smoke (b) partially proven (tool call flowed end-to-end). Dharvi PC: Claude Code 2.1.325 installed, local gateway running, smoke test passed (file-based only).</td>
-            <td>Dharvi gateway likely needs the same thoughtSignature fix as Dhrumesh. QUOTA EXHAUSTED on both keys (starter key 0 available; ~40+ calls burned the ~20/day allowance) — resets 03:00 EST Sat Nov 14. Options build + trader-skill Phase 1 cannot run via Claude Code until the reset or a second key is added (user's second account or mom's). No NSSM service yet.</td>
+            <td>Dharvi gateway likely needs the same thoughtSignature fix as Dhrumesh. QUOTA EXHAUSTED on both keys — resets 03:00 EST Sat Nov 14. A second key was provided this evening and is being added to the Dhrumesh pool (entry "second"; owner unconfirmed, likely the user's second account; mom's key held in reserve), with smoke test (b) re-run underway. Options build + trader-skill Phase 1 wait on that verification. No NSSM service yet.</td>
             <td>—</td>
             <td class="review-pending">Pending</td>
           </tr>
