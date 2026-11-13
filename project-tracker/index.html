@@ -130,8 +130,8 @@
           <tr>
             <td class="project">Gemini gateway + Claude Code <span class="sub">both PCs</span></td>
             <td><span class="pill building">Building</span></td>
-            <td>Starter key on Dhrumesh PC; wife's key on Dharvi PC. Dhrumesh gateway building (localhost-only). Dharvi local gateway + Claude Code install in progress.</td>
-            <td>Smoke tests, then the options build rerun.</td>
+            <td>Dharvi PC: Claude Code 2.1.325 installed, local gateway running (127.0.0.1:8080, wife's key), smoke test PASSED. Dhrumesh PC: starter key in place, gateway building (localhost-only).</td>
+            <td>Fix launcher bug (base URL must not include /v1 — Claude Code appends /v1/messages itself; the Dhrumesh launcher has the same bug). Dhrumesh smoke test, then the options build rerun. Note: gemini-3.1-pro-preview returns 429 on both keys — the gateway rotates to gemini-3.5-flash until the daily quota resets.</td>
             <td>—</td>
             <td class="review-pending">Pending</td>
           </tr>
@@ -146,8 +146,8 @@
           <tr>
             <td class="project">Webull adapter + API</td>
             <td><span class="pill blocked">Blocked</span></td>
-            <td>Brokerage account approved Nov 11, 2026.</td>
-            <td>API application blocked — Webull failed to send the SMS code on Nov 11; sign-in retry running now. Adapter build failed twice; decision pending (retry vs pivot vs drop). Next: finish sign-in, reach Generate Key.</td>
+            <td>Brokerage account approved Nov 11, 2026. Sign-in retry: SMS channel works again — a fresh code was accepted and sign-in progressed past passport.webull.ca to webull.com.</td>
+            <td>Developer Tool → My Application → API Keys Management → Generate Key. Adapter build failed twice; decision pending (retry vs pivot vs drop).</td>
             <td>—</td>
             <td class="review-pending">Pending</td>
           </tr>
