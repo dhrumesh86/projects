@@ -50,6 +50,7 @@
   .pill.nearly   { background: #ccfbf1; color: #134e4a; }
   .pill.ready    { background: #dcfce7; color: #166534; }
   .pill.built    { background: #e0f2fe; color: #0c4a6e; }
+  .pill.parked  { background: #e5e7eb; color: #374151; }
   .pill.needs-you { background: #ffedd5; color: #7c2d12; }
   .review-pending { color: #92400e; font-weight: 600; }
   .review-done { color: #166534; font-weight: 600; }
@@ -146,9 +147,9 @@
           </tr>
           <tr>
             <td class="project">Webull adapter + API</td>
-            <td><span class="pill blocked">Blocked</span></td>
-            <td>Sign-in succeeded Nov 13, 2026 — but there is NO Generate Key step on webull.ca (Developer Tool now opens MCP Management only) and developer.webull.com is unreachable. Per Webull Canada's docs, the API is registered by emailing support@webull.ca with company name + redirect URL.</td>
-            <td>User provides company name + redirect URL for the email to Webull support. Adapter build failed twice; decision pending (retry vs pivot vs drop).</td>
+            <td><span class="pill parked">Parked</span></td>
+            <td>Sign-in succeeded Nov 13, 2026, but there is NO self-service Generate Key step on webull.ca (Developer Tool opens MCP Management only) and developer.webull.com is unreachable. The Canadian API route — email support@webull.ca with company name + redirect URL — is on hold unless the user revives it.</td>
+            <td>None — parked by user decision (Nov 13, 2026): stop chasing Webull, focus on building Ace Trader.</td>
             <td>—</td>
             <td class="review-pending">Pending</td>
           </tr>
