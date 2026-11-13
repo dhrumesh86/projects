@@ -117,7 +117,7 @@
             <td class="project">Ace Trader — trader skill <span class="sub">fundamentals + swing</span></td>
             <td><span class="pill waiting">Waiting on you</span></td>
             <td>Analysis done Nov 13, 2026: trader-skill (11 skills) tested 175/175 on VM + PC, vendored to D:\Ace-Trader\trader-skill\. Biggest gap found: Ace has NO fundamentals (scoring is only a has_recent_10q boolean). Ranked build order: analyst + screener first, then copycat, budget, news, tax, rebalance, alerts. Plan doc written.</td>
-            <td>Swing mode DECIDED: auto-trade under the gates (same as day trades). Still needed from the user: SEC user agent (name + email); screener rules, universe, investors to copy, swing budget, position cap, Pelosi still open (plan defaults proposed). Build blocked tonight by Gemini quota exhaustion — Phase 1 (analyst + screener, no orders) runs after a second key is verified or the quota resets. Note: new config goes in trader/config.json, not trading.yaml; swing sleeve needs its own $10,000 paper account.</td>
+            <td>Swing mode DECIDED: auto-trade under the gates. SEC user agent CONFIRMED (Dhrumesh Patel / dhrumesh.patel86@gmail.com); screener rules, universe, budget, cap, Pelosi use plan defaults. Phase 1 PREP DONE Nov 13, 2026 (trader/config.json + rules.json, 11 skills installed, build prompt drafted). Next: Phase 1 code build (analyst + screener, no orders) once the multi-provider gateway is verified. Note: new config goes in trader/config.json, not trading.yaml; swing sleeve needs its own $10,000 paper account.</td>
             <td>—</td>
             <td class="review-na">n/a</td>
           </tr>
@@ -146,6 +146,14 @@
             <td class="review-pending">Pending</td>
           </tr>
           <tr>
+            <td class="project">IBKR Gateway auto-login <span class="sub">Ace Trader</span></td>
+            <td><span class="pill built">Building</span></td>
+            <td>Requested Nov 13, 2026: automate Gateway startup + login to the paper account so it comes up without the owner typing credentials. Automation build underway on the Dhrumesh PC.</td>
+            <td>Verify Gateway running, port 4002 listening, paper account connected (read-only check, no orders). Unblocks the IBKR paper options probe and the day-trade live bracket check.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
             <td class="project">VS Code + Git + Copilot <span class="sub">both PCs</span></td>
             <td><span class="pill done">Done</span></td>
             <td>Done on both PCs — Dharvi: VS Code 1.146.0; Dhrumesh: VS Code 1.144.0. Code Assist v2.107.0, Copilot v1.388.0, git identity set, GitHub access verified.</td>
@@ -170,36 +178,12 @@
             <td class="review-na">n/a</td>
           </tr>
           <tr>
-            <td class="project">OptiPlex 7050 upgrade</td>
-            <td><span class="pill waiting">Waiting on you</span></td>
-            <td>Upgrade wins over a new PC (mix-and-match $257 vs all-new ~$320).</td>
-            <td>User picks mix vs all-new. SSD purchase blocked on connecting Stripe Link.</td>
-            <td>—</td>
-            <td class="review-na">n/a</td>
-          </tr>
-          <tr>
-            <td class="project">ITR e-verification <span class="sub">Sadhanaben Patel</span></td>
-            <td><span class="pill waiting">Waiting</span></td>
-            <td>ITR-2 filed Nov 12, 2026 via ClearTax.</td>
-            <td>E-verify; fallback is posting the ITR-V by Dec 12, 2026.</td>
-            <td>—</td>
-            <td class="review-na">n/a</td>
-          </tr>
-          <tr>
             <td class="project">Graphify</td>
             <td><span class="pill done">Done</span></td>
             <td>Code graphs built for Ace Trader (1,212 nodes), pc-tutor, cloud-tutor; hooks installed.</td>
             <td>Keep graphs current with <code>graphify update</code> after code changes.</td>
             <td>—</td>
             <td class="review-done">Done</td>
-          </tr>
-          <tr>
-            <td class="project">Family money — SBI transfer</td>
-            <td><span class="pill needs-you">Needs you</span></td>
-            <td>One transfer succeeded Nov 12, 2026; $500 to Dhrumesh on Nov 13, 2026.</td>
-            <td>One Rs 144,219.06 transfer rejected — the user must check the rejection reason in YONO SBI / INB.</td>
-            <td>—</td>
-            <td class="review-na">n/a</td>
           </tr>
           <tr>
             <td class="project">Promptmaster <span class="sub">better Claude Code prompts</span></td>
