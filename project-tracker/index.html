@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Tracker — All Projects</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f4f6f8; color: #1c2430; line-height: 1.45;
+  }
+  header {
+    background: #14213d; color: #fff; padding: 28px 20px 22px;
+  }
+  header .wrap, main .wrap { max-width: 1180px; margin: 0 auto; }
+  h1 { margin: 0 0 6px; font-size: 1.9rem; letter-spacing: -0.02em; }
+  header p { margin: 4px 0; color: #c9d4e6; }
+  header p.updated { color: #ffd166; font-weight: 600; }
+  .rules {
+    background: #fff; border: 1px solid #d8dee6; border-left: 5px solid #14213d;
+    border-radius: 8px; padding: 14px 18px; margin: 18px 0 22px;
+  }
+  .rules h2 { margin: 0 0 8px; font-size: 1.05rem; }
+  .rules ol { margin: 0; padding-left: 20px; }
+  .rules li { margin: 4px 0; }
+  main { padding: 0 20px 40px; }
+  .table-scroll { overflow-x: auto; background: #fff; border: 1px solid #d8dee6; border-radius: 8px; }
+  table { width: 100%; border-collapse: collapse; min-width: 960px; font-size: 0.95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid #e3e8ee; }
+  thead th {
+    background: #14213d; color: #fff; font-size: 0.85rem; text-transform: uppercase;
+    letter-spacing: 0.04em; white-space: nowrap; position: sticky; top: 0;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:nth-child(even) { background: #f8fafc; }
+  td.project { font-weight: 700; white-space: nowrap; }
+  td .sub { display: block; font-weight: 400; color: #5b6b80; font-size: 0.85rem; margin-top: 2px; }
+  code { background: #eef1f5; padding: 1px 5px; border-radius: 4px; font-size: 0.88em; }
+  .pill {
+    display: inline-block; padding: 3px 10px; border-radius: 999px;
+    font-size: 0.82rem; font-weight: 700; white-space: nowrap;
+  }
+  .pill.live     { background: #d9f2e2; color: #14532d; }
+  .pill.done     { background: #dbeafe; color: #1e3a8a; }
+  .pill.building { background: #e0e7ff; color: #3730a3; }
+  .pill.blocked  { background: #fee2e2; color: #7f1d1d; }
+  .pill.waiting  { background: #fef3c7; color: #78350f; }
+  .pill.nearly   { background: #ccfbf1; color: #134e4a; }
+  .pill.ready    { background: #dcfce7; color: #166534; }
+  .pill.needs-you { background: #ffedd5; color: #7c2d12; }
+  .review-pending { color: #92400e; font-weight: 600; }
+  .review-done { color: #166534; font-weight: 600; }
+  .review-na { color: #64748b; }
+  footer { max-width: 1180px; margin: 0 auto; padding: 0 20px 32px; color: #5b6b80; font-size: 0.88rem; }
+  footer p { margin: 6px 0; }
+  @media (max-width: 640px) {
+    h1 { font-size: 1.5rem; }
+    header { padding: 20px 16px 16px; }
+    main { padding: 0 12px 28px; }
+    footer { padding: 0 12px 24px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Project Tracker</h1>
+    <p>Every project in one place — status, blockers, next step, last check-in, and code review.</p>
+    <p class="updated">Last updated: November 13, 2026</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="rules" aria-label="Standing rules">
+      <h2>Standing rules</h2>
+      <ol>
+        <li><strong>Code review:</strong> Muse is the user's assistant and orchestrator — Claude Code, Gemini Code Assist, and GitHub Copilot write the code, and Muse reviews everyone's work. All code from any of the three tools gets reviewed by Muse before it's treated as done.</li>
+        <li><strong>Daily check-in:</strong> code gets committed to GitHub daily, so the last-check-in date on this page shows where gaps are.</li>
+      </ol>
+    </section>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Status</th>
+            <th>Done so far</th>
+            <th>Next step / blocked by</th>
+            <th>Last check-in (commit)</th>
+            <th>Code review</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="project">BrightMind AI tutor</td>
+            <td><span class="pill live">Live</span></td>
+            <td>Demo live at dhrumesh86.github.io/projects/brightmind-demo/ (commit <code>1ecd1ad9</code>, Nov 7, 2026). Content auto-publish on — 9 items live (<code>d7f51717</code>, <code>04a6e987</code>, <code>8acdc874</code>). VoiceStudio voice on.</td>
+            <td>Live AI is local Ollama only (OmniRoute removed, no replacement chosen). Open decisions: Ollama 3b vs 7b, parent-dashboard PIN, Postgres instead of SQLite, daily content schedule.</td>
+            <td>Nov 9, 2026 (<code>8acdc874</code>)</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Ace Trader — day trading</td>
+            <td><span class="pill building">Building</span></td>
+            <td>Day-trader skill vendored; design doc written; build running (AUTO mode chosen by the user).</td>
+            <td>Verify build + tests, then switch on together with the user.</td>
+            <td>Nov 12, 2026 (<code>cae961c</code>)</td>
+            <td class="review-pending">Pending — review when the build reports</td>
+          </tr>
+          <tr>
+            <td class="project">Ace Trader — options premium</td>
+            <td><span class="pill blocked">Blocked</span></td>
+            <td>Strategy designed (16-delta SPY bull put spread). Phase 0 verified (Questrade options data live). 5% budget approved.</td>
+            <td>Blocked by the Gemini gateway — the first build failed on a third-party token limit. Next: rerun the build through the gateway.</td>
+            <td>Nov 12, 2026 (<code>cae961c</code>)</td>
+            <td class="review-pending">Pending</td>
+          </tr>
+          <tr>
+            <td class="project">Ace Trader — core</td>
+            <td><span class="pill live">Live</span></td>
+            <td>Questrade market data verified live. Auto-trader enabled, 0 qualifying signals recently.</td>
+            <td>IB Gateway down since Nov 5 — needs the owner to log in.</td>
+            <td>Nov 12, 2026 (<code>cae961c</code>)</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Gemini gateway + Claude Code <span class="sub">both PCs</span></td>
+            <td><span class="pill building">Building</span></td>
+            <td>Starter key on Dhrumesh PC; wife's key on Dharvi PC. Dhrumesh gateway building (localhost-only). Dharvi local gateway + Claude Code install in progress.</td>
+            <td>Smoke tests, then the options build rerun.</td>
+            <td>—</td>
+            <td class="review-pending">Pending</td>
+          </tr>
+          <tr>
+            <td class="project">VS Code + Git + Copilot <span class="sub">both PCs</span></td>
+            <td><span class="pill nearly">Nearly done</span></td>
+            <td>Dharvi PC: VS Code 1.146.0, Gemini Code Assist v2.107.0, Copilot v1.388.0, git identity set, GitHub access verified. Dhrumesh PC still in progress.</td>
+            <td>Needs the user: Google sign-in (Code Assist), GitHub sign-in + Copilot plan (Copilot Gemini models). Note: Code Assist has no API-key setting — it uses Google sign-in, not the API key.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Webull adapter + API</td>
+            <td><span class="pill blocked">Blocked</span></td>
+            <td>Brokerage account approved Nov 11, 2026.</td>
+            <td>API application blocked — Webull failed to send the SMS code on Nov 11; sign-in retry running now. Adapter build failed twice; decision pending (retry vs pivot vs drop). Next: finish sign-in, reach Generate Key.</td>
+            <td>—</td>
+            <td class="review-pending">Pending</td>
+          </tr>
+          <tr>
+            <td class="project">YouTube monetization</td>
+            <td><span class="pill ready">Ready</span></td>
+            <td>11 YouTube skills installed on both PCs, tools verified, voice.md filled with a starter voice.</td>
+            <td>User shares 3 videos to write the real voice; first script.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">OptiPlex 7050 upgrade</td>
+            <td><span class="pill waiting">Waiting on you</span></td>
+            <td>Upgrade wins over a new PC (mix-and-match $257 vs all-new ~$320).</td>
+            <td>User picks mix vs all-new. SSD purchase blocked on connecting Stripe Link.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">ITR e-verification <span class="sub">Sadhanaben Patel</span></td>
+            <td><span class="pill waiting">Waiting</span></td>
+            <td>ITR-2 filed Nov 12, 2026 via ClearTax.</td>
+            <td>E-verify; fallback is posting the ITR-V by Dec 12, 2026.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+          <tr>
+            <td class="project">Graphify</td>
+            <td><span class="pill done">Done</span></td>
+            <td>Code graphs built for Ace Trader (1,212 nodes), pc-tutor, cloud-tutor; hooks installed.</td>
+            <td>Keep graphs current with <code>graphify update</code> after code changes.</td>
+            <td>—</td>
+            <td class="review-done">Done</td>
+          </tr>
+          <tr>
+            <td class="project">Family money — SBI transfer</td>
+            <td><span class="pill needs-you">Needs you</span></td>
+            <td>One transfer succeeded Nov 12, 2026; $500 to Dhrumesh on Nov 13, 2026.</td>
+            <td>One Rs 144,219.06 transfer rejected — the user must check the rejection reason in YONO SBI / INB.</td>
+            <td>—</td>
+            <td class="review-na">n/a</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>Commit dates verified against GitHub on Nov 13, 2026 (dhrumesh86/projects, dhrumesh86/ace-trader, dhrumesh86/brightmind-ai). “—” means no repo commit applies to that row.</p>
+  <p>Code review means Muse reviews code from all three coding tools — Claude Code, Gemini Code Assist, and GitHub Copilot — before it counts as done. No private values appear on this page; only statuses and short commit SHAs.</p>
+</footer>
+</body>
+</html>
