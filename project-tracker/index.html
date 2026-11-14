@@ -57,6 +57,48 @@
   .review-na { color: #64748b; }
   footer { max-width: 1180px; margin: 0 auto; padding: 0 20px 32px; color: #5b6b80; font-size: 0.88rem; }
   footer p { margin: 6px 0; }
+  .pnl-section {
+    background: #fff; border: 1px solid #d8dee6; border-radius: 8px;
+    padding: 18px 20px; margin: 22px 0;
+  }
+  .pnl-section h2 { margin: 0 0 6px; font-size: 1.25rem; letter-spacing: -0.01em; }
+  .pnl-section > p { margin: 6px 0; color: #3c4a5e; }
+  .pnl-status { font-weight: 600; color: #14213d; }
+  .pnl-status.pending { color: #92400e; }
+  .pnl-rollups {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0;
+  }
+  .rollup {
+    background: #f8fafc; border: 1px solid #d8dee6; border-radius: 8px; padding: 12px 14px;
+  }
+  .rollup h3 { margin: 0 0 4px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; color: #5b6b80; }
+  .rollup .big { font-size: 1.35rem; font-weight: 700; }
+  .rollup .sub { display: block; color: #5b6b80; font-size: 0.85rem; margin-top: 2px; }
+  .sleeve-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 14px 0;
+  }
+  .sleeve-card {
+    background: #f8fafc; border: 1px solid #d8dee6; border-radius: 8px; padding: 14px;
+  }
+  .sleeve-card h3 { margin: 0 0 10px; font-size: 1rem; }
+  .sleeve-card dl { margin: 0; }
+  .sleeve-card .row {
+    display: flex; justify-content: space-between; gap: 10px;
+    padding: 5px 0; border-bottom: 1px solid #e3e8ee; font-size: 0.93rem;
+  }
+  .sleeve-card .row:last-child { border-bottom: none; }
+  .sleeve-card dt { color: #5b6b80; }
+  .sleeve-card dd { margin: 0; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+  .sleeve-card dd.pos { color: #166534; }
+  .sleeve-card dd.neg { color: #7f1d1d; }
+  .pnl-section h3.subhead { margin: 18px 0 10px; font-size: 1.05rem; }
+  .pnl-daily { min-width: 640px; }
+  .pnl-note { font-size: 0.88rem; color: #5b6b80; }
+  .pnl-note strong { color: #3c4a5e; }
+  @media (max-width: 900px) {
+    .sleeve-grid { grid-template-columns: repeat(2, 1fr); }
+    .pnl-rollups { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
     h1 { font-size: 1.5rem; }
     header { padding: 20px 16px 16px; }
@@ -196,6 +238,100 @@
         </tbody>
       </table>
     </div>
+
+    <section class="pnl-section" aria-label="Paper P&amp;L by sleeve">
+      <h2>Paper P&amp;L by sleeve — Ace Trader</h2>
+      <p>How much money each sleeve makes per trade, proven on paper. Paper trading only — no real money. Updated daily after market close from the proof-loop snapshot.</p>
+      <p id="pnl-status" class="pnl-status pending">Loading paper P&amp;L…</p>
+
+      <div class="pnl-rollups" aria-label="Weekly and monthly rollups">
+        <div class="rollup">
+          <h3>This week</h3>
+          <span class="big" id="pnl-week-realized">—</span>
+          <span class="sub">Realized P&amp;L, all sleeves · <span id="pnl-week-shadow-label">shadow —</span></span>
+        </div>
+        <div class="rollup">
+          <h3>This month</h3>
+          <span class="big" id="pnl-month-realized">—</span>
+          <span class="sub">Realized P&amp;L, all sleeves · <span id="pnl-month-shadow-label">shadow —</span></span>
+        </div>
+        <div class="rollup">
+          <h3>Review cadence</h3>
+          <span class="big" style="font-size: 1.05rem;">Weekly &amp; monthly</span>
+          <span class="sub">Weekly / monthly review docs will be linked here once they exist — none yet.</span>
+        </div>
+      </div>
+
+      <div class="sleeve-grid" id="sleeve-grid">
+        <article class="sleeve-card" data-sleeve="daytrade">
+          <h3>Day trade</h3>
+          <dl>
+            <div class="row"><dt>Decisions</dt><dd data-field="decisions">—</dd></div>
+            <div class="row"><dt>Trades</dt><dd data-field="trades">—</dd></div>
+            <div class="row"><dt>Realized P&amp;L</dt><dd data-field="realized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Realized / trade</dt><dd data-field="realized_per_trade">—</dd></div>
+            <div class="row"><dt>Unrealized P&amp;L</dt><dd data-field="unrealized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow P&amp;L</dt><dd data-field="shadow_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow / trade</dt><dd data-field="shadow_per_trade">—</dd></div>
+            <div class="row"><dt>Win rate</dt><dd data-field="win_rate">—</dd></div>
+          </dl>
+        </article>
+        <article class="sleeve-card" data-sleeve="swing">
+          <h3>Swing</h3>
+          <dl>
+            <div class="row"><dt>Decisions</dt><dd data-field="decisions">—</dd></div>
+            <div class="row"><dt>Trades</dt><dd data-field="trades">—</dd></div>
+            <div class="row"><dt>Realized P&amp;L</dt><dd data-field="realized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Realized / trade</dt><dd data-field="realized_per_trade">—</dd></div>
+            <div class="row"><dt>Unrealized P&amp;L</dt><dd data-field="unrealized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow P&amp;L</dt><dd data-field="shadow_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow / trade</dt><dd data-field="shadow_per_trade">—</dd></div>
+            <div class="row"><dt>Win rate</dt><dd data-field="win_rate">—</dd></div>
+          </dl>
+        </article>
+        <article class="sleeve-card" data-sleeve="options">
+          <h3>Options premium</h3>
+          <dl>
+            <div class="row"><dt>Decisions</dt><dd data-field="decisions">—</dd></div>
+            <div class="row"><dt>Trades</dt><dd data-field="trades">—</dd></div>
+            <div class="row"><dt>Realized P&amp;L</dt><dd data-field="realized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Realized / trade</dt><dd data-field="realized_per_trade">—</dd></div>
+            <div class="row"><dt>Unrealized P&amp;L</dt><dd data-field="unrealized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow P&amp;L</dt><dd data-field="shadow_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow / trade</dt><dd data-field="shadow_per_trade">—</dd></div>
+            <div class="row"><dt>Win rate</dt><dd data-field="win_rate">—</dd></div>
+          </dl>
+        </article>
+        <article class="sleeve-card" data-sleeve="equity">
+          <h3>Equity auto-trader</h3>
+          <dl>
+            <div class="row"><dt>Decisions</dt><dd data-field="decisions">—</dd></div>
+            <div class="row"><dt>Trades</dt><dd data-field="trades">—</dd></div>
+            <div class="row"><dt>Realized P&amp;L</dt><dd data-field="realized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Realized / trade</dt><dd data-field="realized_per_trade">—</dd></div>
+            <div class="row"><dt>Unrealized P&amp;L</dt><dd data-field="unrealized_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow P&amp;L</dt><dd data-field="shadow_pnl_usd">—</dd></div>
+            <div class="row"><dt>Shadow / trade</dt><dd data-field="shadow_per_trade">—</dd></div>
+            <div class="row"><dt>Win rate</dt><dd data-field="win_rate">—</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <p class="pnl-note"><strong>Shadow P&amp;L is shadow — paper, no fill confirmed.</strong> It tracks what decisions <em>would</em> have made from market data when no paper fill was confirmed; it is not realized profit. Realized P&amp;L is from paper fills only.</p>
+
+      <h3 class="subhead">Last 30 days — daily</h3>
+      <div class="table-scroll">
+        <table class="pnl-daily">
+          <thead>
+            <tr><th>Date</th><th>Sleeve</th><th>Decisions</th><th>Trades</th><th>Realized P&amp;L</th><th>Shadow P&amp;L</th></tr>
+          </thead>
+          <tbody id="pnl-daily-body">
+            <tr><td colspan="6">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="pnl-note">Source: <code>project-tracker/data/pnl.json</code>, written daily by the proof loop on the Dhrumesh PC and synced into this repo. “—” means no data yet — never a guessed number.</p>
+    </section>
   </div>
 </main>
 
@@ -203,5 +339,127 @@
   <p>Commit dates verified against GitHub on Nov 13, 2026 (dhrumesh86/projects, dhrumesh86/ace-trader, dhrumesh86/brightmind-ai). “—” means no repo commit applies to that row.</p>
   <p>Code review means Muse reviews code from all three coding tools — Claude Code, Gemini Code Assist, and GitHub Copilot — before it counts as done. No private values appear on this page; only statuses and short commit SHAs.</p>
 </footer>
+<script>
+(function () {
+  var DASH = "\u2014";
+  var statusEl = document.getElementById("pnl-status");
+  var SLEEVE_LABELS = { daytrade: "Day trade", swing: "Swing", options: "Options premium", equity: "Equity auto-trader" };
+
+  function fmtMoney(v) {
+    if (v === null || v === undefined || !isFinite(v)) return DASH;
+    var sign = v < 0 ? "-\u2009" : "";
+    return sign + "$" + Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+  function fmtInt(v) {
+    if (v === null || v === undefined || !isFinite(v)) return DASH;
+    return Math.round(v).toLocaleString("en-US");
+  }
+  function fmtWinRate(v) {
+    // Schema: win_rate is null when unknown. Accept a 0-1 fraction or a 0-100 percent.
+    if (v === null || v === undefined || !isFinite(v)) return DASH;
+    var pct = v <= 1 ? v * 100 : v;
+    return pct.toFixed(1) + "%";
+  }
+  function moneyClass(v) {
+    if (v === null || v === undefined || !isFinite(v) || v === 0) return "";
+    return v > 0 ? "pos" : "neg";
+  }
+  function setCell(card, field, text, cls) {
+    var el = card.querySelector('[data-field="' + field + '"]');
+    if (!el) return;
+    el.textContent = text;
+    el.className = cls || "";
+  }
+  function showPending(message) {
+    statusEl.textContent = message;
+    statusEl.classList.add("pending");
+    // All metric cells already default to "—" in the HTML; leave them untouched.
+    var body = document.getElementById("pnl-daily-body");
+    body.innerHTML = '<tr><td colspan="6">\u2014</td></tr>';
+  }
+  function weekStart(d) {
+    var x = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    var day = x.getDay(); // 0 = Sunday
+    x.setDate(x.getDate() - ((day + 6) % 7)); // back to Monday
+    return x;
+  }
+  function parseDate(s) {
+    if (!s) return null;
+    var parts = String(s).split("-");
+    if (parts.length !== 3) return null;
+    var d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+    return isNaN(d) ? null : d;
+  }
+
+  fetch("data/pnl.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (snap) {
+      if (!snap || snap.status === "awaiting-first-run") {
+        showPending("First proof run pending — first market-hours run is Monday, Nov 16, 2026. All figures show \u201c\u2014\u201d until then.");
+        return;
+      }
+      if (snap.status !== "ok") {
+        showPending("Paper P&L snapshot status is \u201c" + (snap.status || "unknown") + "\u201d — figures show \u201c\u2014\u201d until a good snapshot arrives.");
+        return;
+      }
+      statusEl.classList.remove("pending");
+      statusEl.textContent = "As of " + (snap.as_of_date || DASH) +
+        (snap.generated_at ? " · Snapshot generated " + snap.generated_at : "") +
+        " · Updated daily after market close.";
+      var sleeves = snap.sleeves || {};
+      Object.keys(SLEEVE_LABELS).forEach(function (key) {
+        var card = document.querySelector('.sleeve-card[data-sleeve="' + key + '"]');
+        if (!card) return;
+        var s = sleeves[key] || {};
+        setCell(card, "decisions", fmtInt(s.decisions));
+        setCell(card, "trades", fmtInt(s.trades));
+        setCell(card, "realized_pnl_usd", fmtMoney(s.realized_pnl_usd), moneyClass(s.realized_pnl_usd));
+        setCell(card, "realized_per_trade",
+          (s.trades > 0 && isFinite(s.realized_pnl_usd)) ? fmtMoney(s.realized_pnl_usd / s.trades) : DASH,
+          moneyClass(s.trades > 0 ? s.realized_pnl_usd / s.trades : null));
+        setCell(card, "unrealized_pnl_usd", fmtMoney(s.unrealized_pnl_usd), moneyClass(s.unrealized_pnl_usd));
+        setCell(card, "shadow_pnl_usd", fmtMoney(s.shadow_pnl_usd), moneyClass(s.shadow_pnl_usd));
+        setCell(card, "shadow_per_trade",
+          (s.trades > 0 && isFinite(s.shadow_pnl_usd)) ? fmtMoney(s.shadow_pnl_usd / s.trades) : DASH,
+          moneyClass(s.trades > 0 ? s.shadow_pnl_usd / s.trades : null));
+        setCell(card, "win_rate", fmtWinRate(s.win_rate));
+      });
+      // Weekly / monthly rollups derived from the daily array (all sleeves summed).
+      var daily = Array.isArray(snap.daily) ? snap.daily : [];
+      var now = new Date();
+      var ws = weekStart(now);
+      var ms = new Date(now.getFullYear(), now.getMonth(), 1);
+      var weekR = 0, weekS = 0, monthR = 0, monthS = 0;
+      daily.forEach(function (row) {
+        var d = parseDate(row.date);
+        if (!d) return;
+        if (d >= ws) { weekR += row.realized_pnl_usd || 0; weekS += row.shadow_pnl_usd || 0; }
+        if (d >= ms) { monthR += row.realized_pnl_usd || 0; monthS += row.shadow_pnl_usd || 0; }
+      });
+      document.getElementById("pnl-week-realized").textContent = fmtMoney(weekR);
+      document.getElementById("pnl-week-shadow-label").textContent = "shadow " + fmtMoney(weekS) + " — paper, no fill confirmed";
+      document.getElementById("pnl-month-realized").textContent = fmtMoney(monthR);
+      document.getElementById("pnl-month-shadow-label").textContent = "shadow " + fmtMoney(monthS) + " — paper, no fill confirmed";
+      // Daily table, newest first.
+      var body = document.getElementById("pnl-daily-body");
+      var rows = daily.slice().sort(function (a, b) {
+        if (a.date !== b.date) return a.date < b.date ? 1 : -1;
+        return String(a.sleeve).localeCompare(String(b.sleeve));
+      });
+      if (!rows.length) {
+        body.innerHTML = '<tr><td colspan="6">\u2014</td></tr>';
+        return;
+      }
+      body.innerHTML = rows.map(function (row) {
+        return "<tr><td>" + (row.date || DASH) + "</td><td>" + (SLEEVE_LABELS[row.sleeve] || row.sleeve || DASH) +
+          "</td><td>" + fmtInt(row.decisions) + "</td><td>" + fmtInt(row.trades) +
+          "</td><td>" + fmtMoney(row.realized_pnl_usd) + "</td><td>" + fmtMoney(row.shadow_pnl_usd) + "</td></tr>";
+      }).join("");
+    })
+    .catch(function () {
+      showPending("Paper P&L snapshot not found yet — first proof run pending (first market-hours run is Monday, Nov 16, 2026). All figures show \u201c\u2014\u201d until then.");
+    });
+})();
+</script>
 </body>
 </html>
